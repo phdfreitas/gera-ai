@@ -20,6 +20,6 @@ const novoPrompt = () => {
     div.appendChild(document.createTextNode(" Fim: "));
     div.appendChild(inputNumber2);
 
-    // Adiciona o novo div ao formulário
-    document.getElementById("prompts").appendChild(div);
+    let prompts = document.getElementById("prompts")
+    prompts.appendChild(div);
 }
