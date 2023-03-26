@@ -1,0 +1,32 @@
+input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 10%;
+}
+
+button {
+    background-color: #cc00ff;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #7a0099;
+}
+
+#prompts{
+    border: 1px solid #ccc;
+}
