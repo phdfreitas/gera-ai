@@ -1,0 +1,29 @@
+<div id="player">
+    <audio id="musica" controls>
+        <source src="music/Musica.m4a" type="audio/mp4">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+</div>
+
+<div id="prompts">
+    <form id="form" action="/prompts/new" method="post">
+        <div id="form-group">
+            <div id="inputInicio">
+                <label for="inicio">Início</label>
+                <input type="number" name="inicio">
+            </div>
+
+            <div id="inputPrompt">
+                <label for="prompt">Prompt</label>
+                <input type="text" name="prompt">
+            </div>
+        </div>
+        
+        <div id="promptsExtras">
+
+        </div>
+
+        <button id="btnGerar" type="submit">Gerar</button>    
+    </form>
+    <button onclick="novoPrompt()">+Novo Prompt</button>
+</div>
