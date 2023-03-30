@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+/*Logo*/
+#logo{
+    text-align: center;
+    background-color: #C966D7;
+    height: 200px;
+}
+
+#nomeLogo{
+    line-height: 2.5;
+    font-size: 4em;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+/**/
+
+/* Principal */
+#player{
+    text-align: center;
+}
+
+#player audio{
+    margin-top: 20px;
+}
+
+#prompts{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+#prompts input{
+    margin: 0 auto;
+}
+
+#form-group, #prompts, #promptsExtras{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.inputInicio{
+    float: left;
+    width: 20%;
+    margin-left: 100px;
+}
+
+.inputInicio input{
+    width: 50%;
+}
+
 input{
     padding: 5px;
     border-radius: 5px;
@@ -7,35 +60,27 @@ input{
     display: block;
 }
 
+.btnForm{
+    border: 1px solid black;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 120px;
+    border-radius: 5px;
+}
+
 button {
+    float: left;
     background-color: #cc00ff;
     color: white;
     font-weight: 700;
     font-size: 16px;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    float: left;
-    margin-right: 10px;
 }
 
 button:hover {
     background-color: #7a0099;
 }
 
-#prompts{
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    width: 50%;
-}
-
-#inputInicio{
-    float: left;
-    margin-right: 15px;
-}
-
-#form-group, #promptsExtras{
-    margin-top: 15px;
-}
+/**/
