@@ -36,3 +36,7 @@ app.get('/', (req, res) => {
 
 // rotas pras partes dos prompts, talvez seja valido colocar um "get' pra galeria de prompts + video
 app.use('/prompts', require('./routes/prompts'));
+
+app.get('/galeria', (req, res) => {
+    res.render('galeria');
+})

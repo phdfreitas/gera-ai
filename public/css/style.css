@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
+/*Barra de Navegação*/
+#mainNav{
+    background-color: #339194;
+    height: 80px;
+    border-bottom: 2px solid #fff;
+}
+
+#mainNav a{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+#brand{
+    margin-left: 25px;
+}
+
+#navbarNavAltMarkup{
+    margin-left: 70%;
+}
+
+/**/
+
 /*Logo*/
 #logo{
     text-align: center;
@@ -17,6 +42,15 @@
 /**/
 
 /* Principal */
+#principal{
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+
 #player{
     text-align: center;
 }
@@ -26,14 +60,18 @@
 }
 
 #prompts{
-    margin: 0 auto;
+    margin-left: 50px;
     text-align: center;
-    border: 1px solid #ccc;
-    width: 50%;
+    width: 60%;
+    float: left;
 }
 
 #prompts input{
     margin: 0 auto;
+}
+
+form{
+    clear: both;
 }
 
 #form-group, #prompts, #promptsExtras{
@@ -42,9 +80,9 @@
 }
 
 .inputInicio{
-    float: left;
     width: 20%;
-    margin-left: 100px;
+    margin-left: 140px;
+    float: left;
 }
 
 .inputInicio input{
@@ -61,16 +99,23 @@ input{
 }
 
 .btnForm{
-    border: 1px solid black;
     overflow: hidden;
     margin-top: 20px;
-    margin-left: 120px;
     border-radius: 5px;
+    float: left;
+}
+
+#btnGerar{
+    margin-left: 250px;
+}
+
+#btnNovoPrompt{
+    margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 button {
-    float: left;
-    background-color: #cc00ff;
+    background-color: #339194;
     color: white;
     font-weight: 700;
     font-size: 16px;
@@ -80,7 +125,55 @@ button {
 }
 
 button:hover {
-    background-color: #7a0099;
+    background-color: #368986;
+}
+
+
+/**/
+
+/*Lyrics*/
+#lyrics{
+    overflow: hidden;
+    float: left;
+    margin-top: 15px;
+    margin-right: 60px;
+    margin-bottom: 25px;
+    border-left: 1px solid #ccc;
+    width: 30%;
+    float: right;
+}
+
+#lyrics h4, #lyrics-container, p{
+    text-align: center;
+    margin-top: 12px;
+}
+
+/**/
+
+/*Galeria*/
+#galeria{
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+#galeria .video{
+    float: left;
+    width: 50%;
+}
+
+#galeria .video iframe{
+    margin-left: 60px;
+}
+
+.video{
+    overflow: hidden;
+}
+
+.video div{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 15px;
 }
 
 /**/
