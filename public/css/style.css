@@ -41,6 +41,13 @@
 }
 /**/
 
+
+/*File*/
+#inputFile input{
+    margin: 0 auto;
+}
+/**/
+
 /* Principal */
 #principal{
     border: 1px solid #ccc;

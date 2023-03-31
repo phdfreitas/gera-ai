@@ -1,9 +1,13 @@
 <div id="principal">
     <div id="player">
         <audio id="musica" controls>
-            <source src="music/Musica.m4a" type="audio/mp4">
+            <source type="audio/mp4" id="audioSource">
             Seu navegador não suporta a tag de áudio.
         </audio>
+        
+        <div id="inputFile">
+            <input type="file" id="inputAudioSource" accept="audio/*">
+        </div>
     </div>
 
     <div id="prompts">

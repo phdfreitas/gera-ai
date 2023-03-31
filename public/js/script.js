@@ -27,3 +27,22 @@ const novoPrompt = () => {
     let prompts = document.getElementById("promptsExtras")
     prompts.appendChild(div3);
 }
+
+(function handleMusic() {
+    document.querySelector("#inputAudioSource").addEventListener("change", function(){
+        const fileReader = new FileReader();
+
+        fileReader.addEventListener("load", function(){
+            localStorage.setItem("music", fileReader.result);
+            window.location.reload();    
+        });
+        fileReader.readAsDataURL(this.files[0]);
+    });
+
+    document.addEventListener("DOMContentLoaded", function(){
+        if(localStorage.getItem("music")){
+            document.querySelector("#audioSource").src = localStorage.getItem("music");
+            document.querySelector("#musica").load();   
+        }
+    });
+})()
