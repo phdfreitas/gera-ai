@@ -121,6 +121,22 @@ input{
     margin-left: 50px;
 }
 
+#configuracoesExtras span{
+    font-weight: 200;
+    margin-bottom: 10px;
+    display: block;
+    width: 88%;
+}
+
+#configuracoesExtras span:hover{
+    cursor: pointer;
+    font-weight: 400;
+}
+
+#configuracoesExtras #inputsExtras{
+    display: none;
+}
+
 button {
     background-color: #339194;
     color: white;

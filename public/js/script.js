@@ -46,3 +46,13 @@ const novoPrompt = () => {
         }
     });
 })()
+
+function configuracoesExtras() {
+    let inputsExtras = document.getElementById("inputsExtras");
+    if (inputsExtras.style.display === "none") {
+        inputsExtras.style.display = "contents";
+    } else {
+        inputsExtras.style.display = "none";
+        
+    }
+}
