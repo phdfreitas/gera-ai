@@ -6,65 +6,85 @@
         </audio>
         
         <div id="inputFile">
+            <label for="inputAudioSource">
+                <i class="fa-solid fa-music" style="color: #8d8d8d;"></i>
+                Selecione a música
+            </label>
             <input type="file" id="inputAudioSource" accept="audio/*">
         </div>
     </div>
-
+        
     <div id="prompts">
         <form id="form" action="/prompts/new" method="post">
             <div id="form-group">
-                <div class="inputInicio">
-                    <label for="inicio">Início</label>
-                    <input type="number" name="inicio" value="0">
-                </div>
-
-                <div class="inputPrompt">
-                    <label for="prompt">Prompt</label>
-                    <input type="text" name="prompt">
-                </div>
-
-                <div id="configuracoesExtras">
-                    <span onclick="configuracoesExtras()">Configurações adicionais</span>
-
-                    <div id="inputsExtras">
-                        <label for="velocidade">Velocidade</label>
-                        <input type="number" name="velocidade" value="1">
+                <div id="inputsBasicos">
+                    <div id="inputTempoInicio" class="inputTempo">
+                        <label for="inicio" class="labelInputTempo">de</label>
+                        <input type="number" name="inicio" placeholder="00:00">
+                    </div>
+                    
+                    <div id="inputTempoFim" class="inputTempo">
+                        <label for="fim" class="labelInputTempo">até</label>
+                        <input type="number" name="fim" placeholder="00:00">
+                    </div>
+    
+                    <div id="inputPromptText" class="inputPrompt">
+                        <textarea name="prompt" id="" cols="140" rows="2" placeholder="Digite seu prompt aqui"></textarea>
                     </div>
                 </div>
-            </div>
+                            
+                <span id="configuracoesExtras" class="configuracoesExtrasStyle">
+                    <span id="configExtras" class="configExtrasStyle" onclick="configuracoesExtras(this)">
+                        <i class="fa-solid fa-bars fa-lg" style="color: #8d8d8d;"></i>
+                    </span>
 
+                    <span id="excluirPrompt" class="excluirPromptStyle">
+                        <i class="fa-solid fa-trash-can" style="color: #8d8d8d;"></i>
+                    </span>
+                </span>
+
+                <div id="todosInputsExtras">
+                    <div id="inputsExtras" class="inputsExtrasStyle">
+                        <div class="textInputsExtras">
+                            <span>configurações do prompt</span>
+                        </div>
+
+                        <span id="btnFechar" class="btnFecharStyle" onclick="configuracoesExtras(this)">
+                            <i class="fa-solid fa-xmark fa-lg" style="color: #fff;"></i>
+                        </span>
+    
+                        <div id="inputExtraAngulo" class="inputExtraRange">
+                            <label for="angulo">ângulo</label>
+                            <input type="range" name="angulo" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraZoom" class="inputExtraRange">
+                            <label for="zoom">zoom</label>
+                            <input type="range" name="zoom" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraEixoX" class="inputExtraRange">
+                            <label for="eixoX">movimento (eixo x)</label>
+                            <input type="range" name="eixoX" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraEixoY" class="inputExtraRange">
+                            <label for="eixoY">movimento (eixo y)</label>
+                            <input type="range" name="eixoY" min="-4" max="4">
+                        </div>
+    
+                        <button id="btnConfExtras">aplicar configurações</button>
+                    </div>
+                </div>
+
+            </div>
+        
             <div id="promptsExtras">
             </div>
-
-            <button id="btnGerar" class="btnForm" type="submit">Gerar Vídeo</button>
+        
+            <button id="btnGerar" class="btnForm" type="submit">gerar vídeo</button>
         </form>    
-        <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+Novo Prompt</button>
-    </div>
-
-    <div id="lyrics">
-        <h4>Acompanhe a letra da sua música</h4>
-        <div class="lyrics-container">
-            <div class="lyrics-content">
-                <div class="lyrics-text">
-                    <p>
-
-                        Agora eu era o herói<br>
-                        E o meu cavalo só falava inglês<br>
-                        A noiva do cowboy<br>
-                        Era você além das outras três<br><br>
-
-                        Eu enfrentava os batalhões<br>
-                        Os alemães e seus canhões<br>
-                        Guardava o meu bodoque<br>
-                        E ensaiava um rock para as matinês<br><br>
-
-                        Agora eu era o rei<br>
-                        Era o bedel e era também juiz<br>
-                        E pela minha lei<br>
-                        A gente era obrigado a ser feliz<br><br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        
+        <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+ adicionar entrada</button>
+    </div>     
 </div>

@@ -1,31 +1,53 @@
 const novoPrompt = () => {
     
-    let inputText = document.createElement("input");
-    inputText.setAttribute("type", "text");
-    inputText.setAttribute("name", "prompt");
+    let inputsBasicos = document.getElementById("inputsBasicos");
 
-    let inputNumber = document.createElement("input");
-    inputNumber.setAttribute("type", "number");
-    inputNumber.setAttribute("name", "inicio");
-
-    let div1 = document.createElement("div");
-    div1.className = "inputInicio"
-    div1.appendChild(document.createTextNode("Início"));
-    div1.appendChild(inputNumber);
-
-    let div2 = document.createElement("div")
-    div2.className = "inputPrompt"
-    div2.appendChild(document.createTextNode("Prompt"));
-    div2.appendChild(inputText);
+    let novaDiv = document.createElement("div");
+    novaDiv.innerHTML = inputsBasicos.innerHTML;
     
-    let div3 = document.createElement("div")
-    div3.setAttribute("id", "form-group")
+    /**/    
+    let totalSpan = document.querySelectorAll("span").length;
+    let span = document.getElementById("configuracoesExtras");
     
-    div3.appendChild(div1);
-    div3.appendChild(div2);
+    let span1 = document.createElement("span");
+    span1.innerHTML = span.innerHTML;
+    span1.id = "configuracoesExtras" + (totalSpan + 1);
+    span1.setAttribute("class", "configuracoesExtrasStyle");
+    span1.childNodes[1].setAttribute("id", "configExtras" + (totalSpan + 1));
+    span1.childNodes[1].setAttribute("class", "configExtrasStyle");
+    span1.childNodes[1].setAttribute("onclick", "configuracoesExtras(this)");
+
+    span1.childNodes[3].setAttribute("id", "excluirPrompt" + (totalSpan + 1));
+    span1.childNodes[3].setAttribute("class", "excluirPromptStyle");
+    novaDiv.appendChild(span1);
+    /**/
+
+    let inputExtras = document.querySelector("#inputsExtras");
+    
+    let novaDivInputExtras = document.createElement("div");
+    novaDivInputExtras.id = "inputsExtras" + (totalSpan + 1);
+    novaDivInputExtras.setAttribute("class", "inputsExtrasStyle");
+    novaDivInputExtras.innerHTML = inputExtras.innerHTML;
+
+    console.log(novaDivInputExtras.childNodes);
+
+    novaDivInputExtras.childNodes[3].setAttribute("id", "btnFechar" + (totalSpan + 1));
+    novaDivInputExtras.childNodes[3].setAttribute("class", "btnFecharStyle");
+    novaDivInputExtras.childNodes[3].setAttribute("onclick", "configuracoesExtras(this)");
+
+    novaDivInputExtras.childNodes[5].childNodes[3].setAttribute("name", "angulo" + (totalSpan + 1));
+    novaDivInputExtras.childNodes[7].childNodes[3].setAttribute("name", "zoom" + (totalSpan + 1));
+    novaDivInputExtras.childNodes[9].childNodes[3].setAttribute("name", "eixoX" + (totalSpan + 1));
+    novaDivInputExtras.childNodes[11].childNodes[3].setAttribute("name", "eixoY" + (totalSpan + 1));
+
+    novaDiv.appendChild(novaDivInputExtras);
+
+    let divFormGroup = document.createElement("div")
+    divFormGroup.setAttribute("id", "form-group")
+    divFormGroup.appendChild(novaDiv);
 
     let prompts = document.getElementById("promptsExtras")
-    prompts.appendChild(div3);
+    prompts.appendChild(divFormGroup);
 }
 
 (function handleMusic() {
@@ -47,12 +69,45 @@ const novoPrompt = () => {
     });
 })()
 
-function configuracoesExtras() {
-    let inputsExtras = document.getElementById("inputsExtras");
-    if (inputsExtras.style.display === "none") {
-        inputsExtras.style.display = "contents";
-    } else {
-        inputsExtras.style.display = "none";
-        
-    }
+function configuracoesExtras(element) {
+    console.log(element.id);
+
+    let idValue = element.id.length < 12 ? element.id.substring(9) : element.id.substring(12);
+
+    let inputsExtras = document.getElementById("inputsExtras" + idValue);
+    inputsExtras.classList.toggle("show");
 }
+
+const idVideoParaUsuario = document.getElementById("idVideoParaUsuario");
+idVideoParaUsuario.addEventListener("load", function(){
+    alert("Video carregado");
+});
+
+function exibirMensagem(){
+    console.log("Mensagem exibida");
+}
+
+
+/*(function form() {
+    document.querySelector("#form").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        let inputs = document.querySelectorAll("#form input");
+        let textareas = document.querySelectorAll("#form textarea");
+        let temposIniciais = document.querySelectorAll("#form input[name='tempoInicial']");
+
+        for (let index = 0; index < textareas.length; index++) {
+            const element = textareas[index].name;
+            console.log(element);
+        }
+
+        for (let index = 0; index < inputs.length; index++) {
+            const element = inputs[index].name;
+            console.log(element);
+        }
+
+        console.log(temposIniciais);
+
+        //window.location.href = "galeria.html";
+    });
+})();*/

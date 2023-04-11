@@ -4,6 +4,7 @@ const app               = express();
 const path              = require('path');
 const db                = require('./db/connection');
 const bodyParser        = require('body-parser');
+const fetch = require('node-fetch');
 
 const PORT = 3000;
 
@@ -34,9 +35,34 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+// rota para a página de output do video gerado pelo usuário
+app.post('/output', (req, res) => {
+    const {videoId} = req.body;
+    console.log('videoId: ', videoId);
+
+    const newResponse = fetch(`https://api.replicate.com/v1/predictions/${videoId}`, {
+        "headers": {
+        "Authorization": "Token ",
+        "Content-Type": "application/json"
+        }
+    })
+
+    newResponse.then(res => res.json())
+    .then(data => {
+        const {output} = data;
+        console.log(data)
+        res.render('output', {output});
+    });
+})
+
 // rotas pras partes dos prompts, talvez seja valido colocar um "get' pra galeria de prompts + video
 app.use('/prompts', require('./routes/prompts'));
 
 app.get('/galeria', (req, res) => {
     res.render('galeria');
+})
+
+app.get('/:id', (req, res) => {
+    const {id} = req.params;
+    res.render('video', {id});
 })

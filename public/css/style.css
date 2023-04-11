@@ -1,22 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
+audio::-webkit-media-controls-panel {
+    background-color: #444444;
+}
+  
+audio::-webkit-media-controls-play-button {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+  
+audio::-webkit-media-controls-timeline {
+  height: 5px;
+  background-color: #444444 !important;
+  border-radius: 5px;
+}
+  
+audio::-webkit-media-controls-timeline-viewport {
+  height: 15px;
+  background-color: #444444;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+  
+
+#bodyBackground{
+    background-color: #1E1E1E;
+}
+
+
 /*Barra de Navegação*/
 #mainNav{
-    background-color: #339194;
+    background-color: #444444;
     height: 80px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #8D8D8D;
 }
 
 #mainNav a{
     color: #fff;
-    font-size: 1.5em;
-    font-weight: 800;
+    font-size: 1.3em;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 
 #brand{
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 #navbarNavAltMarkup{
@@ -34,7 +69,7 @@
 
 #nomeLogo{
     line-height: 2.5;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
     color: #fff;
@@ -60,95 +95,200 @@
 
 #player{
     text-align: center;
+    background-color: #444444;
 }
 
 #player audio{
     margin-top: 20px;
+    width: 100%;
+
 }
 
 #prompts{
-    margin-left: 50px;
     text-align: center;
-    width: 60%;
-    float: left;
+    width: 100%;
 }
 
-#prompts input{
-    margin: 0 auto;
+#form-group{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #444444;
+    height: 100px;
 }
 
-form{
-    clear: both;
+#form-group>.inputTempo{
+    margin-left: 10px;
 }
 
-#form-group, #prompts, #promptsExtras{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.inputInicio{
+.inputTempo{
     width: 20%;
-    margin-left: 140px;
+}
+
+.labelInputTempo{
     float: left;
+    color: #8D8D8D;
 }
 
-.inputInicio input{
-    width: 50%;
+.inputTempo input{
+    text-decoration: none;
+    box-shadow: none;
+    width: 30%;
+    padding: -10px;
+    line-height: 0.5;
+    background: transparent;
+    border: 1px solid #8D8D8D;
+    border-radius: 5px;
+    color: #8D8D8D;
 }
 
-input{
+#inputTempoInicio{
+    margin-top: -10px;
+}
+
+#inputTempoInicio input{
+    margin-right: 130px;
+}
+
+#inputTempoFim{
+    margin-top: 20px;
+}
+
+#inputTempoFim input{
+    margin-right: 135px;
+}
+
+.inputPrompt{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 125px;
+}
+
+.inputPrompt textarea{
+    background-color: #444444;
+    color: #BFBFBF;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-left: 12px;
+}
+
+/*input{
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
     font-size: 14px;
     display: block;
-}
-
-.btnForm{
-    overflow: hidden;
-    margin-top: 20px;
-    border-radius: 5px;
-    float: left;
-}
+}*/
 
 #btnGerar{
-    margin-left: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 #btnNovoPrompt{
-    margin-bottom: 20px;
-    margin-left: 50px;
+    margin-top: 30px;
 }
 
-#configuracoesExtras span{
-    font-weight: 200;
-    margin-bottom: 10px;
-    display: block;
-    width: 88%;
-}
-
-#configuracoesExtras span:hover{
-    cursor: pointer;
-    font-weight: 400;
-}
-
-#configuracoesExtras #inputsExtras{
-    display: none;
-}
-
-button {
-    background-color: #339194;
-    color: white;
+#btnNovoPrompt, #btnConfExtras, #btnGerar{
+    background-color: #fff;
+    color: #000;
     font-weight: 700;
     font-size: 16px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 50px;
 }
 
-button:hover {
-    background-color: #368986;
+#btnConfExtras{
+    width: 320px;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.configuracoesExtrasStyle span.configExtrasStyle{
+    position: absolute;
+    margin-left: 570px;
+    margin-top: -60px;
+}
+
+.configuracoesExtrasStyle span.excluirPromptStyle{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -60px;
+}
+
+.configuracoesExtrasStyle span:hover{
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/*Menu lateral*/
+.inputsExtrasStyle{
+    position: fixed;
+    margin-top: 80px;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 25px;
+    transition: all 0.25s;
+    z-index: 1;
+}
+
+.inputsExtrasStyle.show{
+    right: 0;
+}
+
+.inputsExtrasStyle.disabled{
+    right: -400px;
+}
+
+.inputsExtrasStyle, .inputExtraRange{
+    text-align: justify;
+    color: #8D8D8D;
+    margin-bottom: 10px;
+}
+
+.inputsExtrasStyle select{
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #8D8D8D;
+}
+
+.inputsExtrasStyle .inputExtraRange input{
+    width: 100%;
+    padding: 8px;
+}
+
+.inputsExtrasStyle .btnFecharStyle{
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    font-size: 1.2em;
+}
+
+.inputsExtrasStyle .btnFecharStyle:hover{
+    cursor: pointer;
+}
+
+.textInputsExtras{
+    display: inline-block;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #fff;
 }
 
 
@@ -156,6 +296,7 @@ button:hover {
 
 /*Lyrics*/
 #lyrics{
+    display: none;
     overflow: hidden;
     float: left;
     margin-top: 15px;
@@ -200,3 +341,29 @@ button:hover {
 }
 
 /**/
+
+/**/
+#inputAudioSource{
+    display: none;
+}
+
+label[for="inputAudioSource"] {
+    padding: 8px 10px;
+    background-color: #1E1E1E;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+#videoReplicate{
+    display: none;
+}
+
+#mensagemErro{
+    display: none;
+}
+.resultadoPrompt{
+    color: #fff;
+}
+/*af6zjhfmrzbxta23uznrfamjfu*/

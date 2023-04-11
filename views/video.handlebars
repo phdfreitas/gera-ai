@@ -1,0 +1,9 @@
+<div class="resultadoPrompt" >
+O id do seu vídeo é: <strong> {{id}}. </strong> 
+</div>
+
+<form action="/output" method="post">
+    <label for="videoId" style="color: aliceblue;">Id do seu video</label>
+    <input type="text" name="videoId" id="videoId">
+    <button type="submit">Obter video</button>
+</form>
