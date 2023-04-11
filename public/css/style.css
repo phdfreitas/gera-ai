@@ -198,7 +198,7 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 25px;
 }
 
-#btnNovoPrompt, #btnConfExtras, #btnGerar{
+#btnNovoPrompt, #btnConfExtras, #btnGerar, #btnObterVideo{
     background-color: #fff;
     color: #000;
     font-weight: 700;
@@ -216,6 +216,10 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 20px;
 }
 
+#btnObterVideo{
+    padding: 8px 16px;
+    margin-top: 12px;
+}
 
 /*Menu lateral*/
 .inputsExtrasStyle{
@@ -346,14 +350,39 @@ label[for="inputAudioSource"] {
     margin-bottom: 12px;
 }
 
-#videoReplicate{
-    display: none;
+.divResultadoId{
+    margin-top: 50px;
+    border: 1px solid #444444;
 }
 
-#mensagemErro{
-    display: none;
-}
-.resultadoPrompt{
+.idVideoGerado{
     color: #fff;
+    text-align: center;
+    margin-top: 50px;
 }
+
+.obterVideoGerado{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.obterVideoGerado input{
+    width: 28%;
+    border: 1px solid white;
+    background: transparent;
+    color: #BFBFBF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.obterVideoGerado input::placeholder{
+    text-align: center;
+    color: #BFBFBF;
+}
+
+.divBtnObterVideo{
+    margin-right: 36px;
+    margin-bottom: 30px;
+}
+
 /*af6zjhfmrzbxta23uznrfamjfu*/
