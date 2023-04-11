@@ -85,9 +85,6 @@ audio::-webkit-media-controls-time-remaining-display {
 
 /* Principal */
 #principal{
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    overflow: hidden;
     margin-top: 60px;
     margin-bottom: 30px;
 }
@@ -96,6 +93,8 @@ audio::-webkit-media-controls-time-remaining-display {
 #player{
     text-align: center;
     background-color: #444444;
+    border: 1px solid #fff;
+    border-radius: 10px;
 }
 
 #player audio{
@@ -104,8 +103,8 @@ audio::-webkit-media-controls-time-remaining-display {
 
 }
 
+/*Estilo Inputs de Prompt*/
 #prompts{
-    text-align: center;
     width: 100%;
 }
 
@@ -114,10 +113,14 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 20px;
     background-color: #444444;
     height: 100px;
+    border: 1px solid #fff;
+    border-radius: 5px;
 }
 
-#form-group>.inputTempo{
-    margin-left: 10px;
+#inputTempoInicio{
+    width: 5%;
+    float: left;
+    margin-left: 30px;
 }
 
 .inputTempo{
@@ -125,60 +128,59 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 .labelInputTempo{
-    float: left;
     color: #8D8D8D;
+    width: 30%;
+    margin-left: 0px;
+    display: block;
 }
 
-.inputTempo input{
+#promptInicio{
     text-decoration: none;
     box-shadow: none;
-    width: 30%;
-    padding: -10px;
+    width: 100%;
     line-height: 0.5;
     background: transparent;
     border: 1px solid #8D8D8D;
     border-radius: 5px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+#promptInicio::placeholder{
     color: #8D8D8D;
 }
 
-#inputTempoInicio{
-    margin-top: -10px;
+#inputPromptText{
+    display: inline-block;
+    padding: 0px;
+    margin-left: 25px;
+    margin-top: 8px;
 }
 
-#inputTempoInicio input{
-    margin-right: 130px;
-}
-
-#inputTempoFim{
-    margin-top: 20px;
-}
-
-#inputTempoFim input{
-    margin-right: 135px;
-}
-
-.inputPrompt{
-    position: absolute;
-    margin-top: -60px;
-    margin-left: 125px;
-}
-
-.inputPrompt textarea{
+#inputPromptText textarea{
     background-color: #444444;
     color: #BFBFBF;
     border: 1px solid #fff;
     border-radius: 5px;
-    margin-left: 12px;
+    padding: 0px;   
+    clear: both;
 }
 
-/*input{
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    font-size: 14px;
-    display: block;
-}*/
+.iconesConfiguracoesExtras{
+    float: right;
+    margin-top: -58px;
+    margin-right: 45px;
+}
+
+.iconesConfiguracoesExtras1{
+    float: right;
+    margin-top: 6px;
+    margin-right: 45px;
+}
+
+.configuracoesExtrasStyle span:hover{
+    cursor: pointer;
+}
 
 #btnGerar{
     position: absolute;
@@ -188,8 +190,12 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-right: 20px;
 }
 
+#divBtnNovoPrompt{
+    text-align: center;
+}
+
 #btnNovoPrompt{
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 #btnNovoPrompt, #btnConfExtras, #btnGerar{
@@ -210,22 +216,6 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 20px;
 }
 
-.configuracoesExtrasStyle span.configExtrasStyle{
-    position: absolute;
-    margin-left: 570px;
-    margin-top: -60px;
-}
-
-.configuracoesExtrasStyle span.excluirPromptStyle{
-    position: absolute;
-    margin-left: 600px;
-    margin-top: -60px;
-}
-
-.configuracoesExtrasStyle span:hover{
-    cursor: pointer;
-    font-weight: 400;
-}
 
 /*Menu lateral*/
 .inputsExtrasStyle{

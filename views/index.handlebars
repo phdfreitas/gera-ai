@@ -19,29 +19,26 @@
             <div id="form-group">
                 <div id="inputsBasicos">
                     <div id="inputTempoInicio" class="inputTempo">
-                        <label for="inicio" class="labelInputTempo">de</label>
-                        <input type="number" name="inicio" placeholder="00:00">
+                        <label for="promptInicio" class="labelInputTempo">inicio</label>
+                        <input id="promptInicio" type="number" name="inicio" placeholder="00:00">
                     </div>
-                    
-                    <div id="inputTempoFim" class="inputTempo">
-                        <label for="fim" class="labelInputTempo">até</label>
-                        <input type="number" name="fim" placeholder="00:00">
-                    </div>
-    
+                     
                     <div id="inputPromptText" class="inputPrompt">
                         <textarea name="prompt" id="" cols="140" rows="2" placeholder="Digite seu prompt aqui"></textarea>
                     </div>
                 </div>
-                            
-                <span id="configuracoesExtras" class="configuracoesExtrasStyle">
-                    <span id="configExtras" class="configExtrasStyle" onclick="configuracoesExtras(this)">
-                        <i class="fa-solid fa-bars fa-lg" style="color: #8d8d8d;"></i>
-                    </span>
 
-                    <span id="excluirPrompt" class="excluirPromptStyle">
-                        <i class="fa-solid fa-trash-can" style="color: #8d8d8d;"></i>
+                <div class="iconesConfiguracoesExtras">  
+                    <span id="configuracoesExtras" class="configuracoesExtrasStyle">
+                        <span id="configExtras" class="configExtrasStyle" onclick="configuracoesExtras(this)">
+                            <i class="fa-solid fa-bars fa-lg" style="color: #8d8d8d;"></i>
+                        </span>
+
+                        <span id="excluirPrompt" class="excluirPromptStyle">
+                            <i class="fa-solid fa-trash-can" style="color: #8d8d8d;"></i>
+                        </span>
                     </span>
-                </span>
+                </div>
 
                 <div id="todosInputsExtras">
                     <div id="inputsExtras" class="inputsExtrasStyle">
@@ -85,6 +82,8 @@
             <button id="btnGerar" class="btnForm" type="submit">gerar vídeo</button>
         </form>    
         
-        <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+ adicionar entrada</button>
+        <div id="divBtnNovoPrompt">
+            <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+ adicionar entrada</button>
+        </div>
     </div>     
 </div>

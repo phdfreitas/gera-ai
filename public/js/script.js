@@ -3,12 +3,16 @@ const novoPrompt = () => {
     let inputsBasicos = document.getElementById("inputsBasicos");
 
     let novaDiv = document.createElement("div");
+    novaDiv.setAttribute("class", "form-group");
     novaDiv.innerHTML = inputsBasicos.innerHTML;
     
     /**/    
     let totalSpan = document.querySelectorAll("span").length;
     let span = document.getElementById("configuracoesExtras");
     
+    let divIcones = document.createElement("div");
+    divIcones.setAttribute("class", "iconesConfiguracoesExtras1");
+
     let span1 = document.createElement("span");
     span1.innerHTML = span.innerHTML;
     span1.id = "configuracoesExtras" + (totalSpan + 1);
@@ -19,7 +23,10 @@ const novoPrompt = () => {
 
     span1.childNodes[3].setAttribute("id", "excluirPrompt" + (totalSpan + 1));
     span1.childNodes[3].setAttribute("class", "excluirPromptStyle");
-    novaDiv.appendChild(span1);
+    divIcones.appendChild(span1);
+
+
+    novaDiv.appendChild(divIcones);
     /**/
 
     let inputExtras = document.querySelector("#inputsExtras");
