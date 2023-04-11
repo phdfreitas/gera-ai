@@ -385,4 +385,16 @@ label[for="inputAudioSource"] {
     margin-bottom: 30px;
 }
 
+/*Página resultado final*/
+.resultadoFinal{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.resultadoFinal h3{
+    color: #8D8D8D;
+}
+
+/**/
 /*af6zjhfmrzbxta23uznrfamjfu*/
