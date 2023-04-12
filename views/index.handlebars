@@ -1,4 +1,4 @@
-<div id="principal">
+<div class="container" id="principal">
     <div id="player">
         <audio id="musica" controls>
             <source type="audio/mp4" id="audioSource">
@@ -19,10 +19,15 @@
             <div id="form-group">
                 <div id="inputsBasicos">
                     <div id="inputTempoInicio" class="inputTempo">
-                        <label for="promptInicio" class="labelInputTempo">inicio</label>
+                        <label for="promptInicio" class="labelInputTempo">de</label>
                         <input id="promptInicio" type="number" name="inicio" placeholder="00:00">
                     </div>
-                     
+
+                    <div id="inputTempoFim" class="inputTempo">
+                        <label for="fim" class="labelInputTempo">até</label>
+                        <input id="promptFim" type="number" name="fim" placeholder="00:00">
+                    </div>
+
                     <div id="inputPromptText" class="inputPrompt">
                         <textarea name="prompt" id="" cols="140" rows="2" placeholder="Digite seu prompt aqui"></textarea>
                     </div>
@@ -85,5 +90,26 @@
         <div id="divBtnNovoPrompt">
             <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+ adicionar entrada</button>
         </div>
-    </div>     
+    </div>        
 </div>
+
+<footer id="barraNavegacaoRodape">
+  <nav class="navbar navbar-expand-lg" id="navbarRodape">
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse">
+				<div class="navbar-nav">
+					<a class="nav-link" href="#">configs</a>
+					<a class="nav-link" href="#">letra</a>
+					<a class="nav-link" href="#">exportar</a>
+				</div>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+            
+			
+		</div>
+	</nav>
+</footer>

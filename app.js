@@ -42,16 +42,15 @@ app.post('/output', (req, res) => {
 
     const newResponse = fetch(`https://api.replicate.com/v1/predictions/${videoId}`, {
         "headers": {
-        "Authorization": "Token ",
+        "Authorization": "Token ed6353364d7d83e774d4e31e9fe314613c5bc55c",
         "Content-Type": "application/json"
         }
     })
 
     newResponse.then(res => res.json())
     .then(data => {
-        const {output} = data;
         console.log(data)
-        res.render('output', {output});
+        res.render('output', {data});
     });
 })
 
