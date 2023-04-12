@@ -85,36 +85,32 @@ function configuracoesExtras(element) {
     inputsExtras.classList.toggle("show");
 }
 
-const idVideoParaUsuario = document.getElementById("idVideoParaUsuario");
-idVideoParaUsuario.addEventListener("load", function(){
-    alert("Video carregado");
-});
+function exportarPrompt(){
+    let promptsInicio = document.querySelectorAll("input[name='inicio']");
+    let prompts = document.querySelectorAll("textarea[name='prompt']");
 
-function exibirMensagem(){
-    console.log("Mensagem exibida");
+    let resultadoFinal = '{\n'
+    
+    prompts.forEach((element, index) => {
+        if (index == prompts.length - 1) {
+            resultadoFinal += `\t"${promptsInicio[index].value * 12}": "${element.value}"\n}`;
+        }
+        else{
+            resultadoFinal += `\t"${promptsInicio[index].value * 12}": "${element.value}",\n`;
+        }
+    });
+
+    let download = document.createElement("a");
+    download.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(resultadoFinal));
+    download.setAttribute("download", "prompt.txt");
+    download.style.display = "none";
+    document.body.appendChild(download);
+    download.click();
+    document.body.removeChild(download);
+
+    console.log(resultadoFinal);
 }
 
+function construirPromptDeforum(){
 
-/*(function form() {
-    document.querySelector("#form").addEventListener("submit", function(event){
-        event.preventDefault();
-
-        let inputs = document.querySelectorAll("#form input");
-        let textareas = document.querySelectorAll("#form textarea");
-        let temposIniciais = document.querySelectorAll("#form input[name='tempoInicial']");
-
-        for (let index = 0; index < textareas.length; index++) {
-            const element = textareas[index].name;
-            console.log(element);
-        }
-
-        for (let index = 0; index < inputs.length; index++) {
-            const element = inputs[index].name;
-            console.log(element);
-        }
-
-        console.log(temposIniciais);
-
-        //window.location.href = "galeria.html";
-    });
-})();*/
+}
