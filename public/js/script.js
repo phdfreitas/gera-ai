@@ -10,6 +10,9 @@ const novoPrompt = () => {
     let totalSpan = document.querySelectorAll("span").length;
     let span = document.getElementById("configuracoesExtras");
     
+    let spanPai = span.parentNode;
+    spanPai.classList.remove("displayNoneElement");
+
     let divIcones = document.createElement("div");
     divIcones.setAttribute("class", "iconesConfiguracoesExtras1");
 
@@ -28,6 +31,8 @@ const novoPrompt = () => {
 
     novaDiv.appendChild(divIcones);
     /**/
+
+    spanPai.classList.add("displayNoneElement");
 
     let inputExtras = document.querySelector("#inputsExtras");
     
@@ -83,6 +88,11 @@ function configuracoesExtras(element) {
 
     let inputsExtras = document.getElementById("inputsExtras" + idValue);
     inputsExtras.classList.toggle("show");
+}
+
+function excluirPrompt(element){
+    let promptParaExcluir = element.parentNode.parentNode.parentNode.parentNode;
+    promptParaExcluir.parentNode.removeChild(promptParaExcluir);
 }
 
 function exportarPrompt(){
