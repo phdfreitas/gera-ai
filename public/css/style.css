@@ -407,5 +407,128 @@ label[for="inputAudioSource"] {
     height: 60px;
 }
 
+/*Modal*/
+#btnRecuperarVideo{
+    display: none;
+}
+
+#modalDialogCustom .modal-content{
+    background-color: #2C2C2C;
+    width: 550px;
+}
+
+#modalDialogCustom .modal-header{
+    color: #fff;
+    border: none;
+}
+
+#modalDialogCustom .modal-header h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+#modalDialogCustom .modal-header h4{
+    color: #BFBFBF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+#modalDialogCustom .modal-body h6{
+    color: #F5F5F5;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+
+#modalDialogCustom .modal-header button{
+    color: #BFBFBF;
+}
+
+.labelInputModal{
+    color: #BFBFBF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.inputModal{
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#modalDialogCustom .modal-footer{
+    border: none;
+    margin-bottom: 15px;
+}
+
+#modalDialogCustom .modal-footer p, #modalDialogCustom .modal-header p{
+    color: #BFBFBF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+#modalDialogCustom .modal-footer div{
+    margin-bottom: 30px;
+}
+
+#modalDialogCustom .modal-footer button{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 18px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#modalDialogCustom .modal-footer button#btnBaixarVideoModal{
+    background: transparent;
+    color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin: 12px auto;
+}
+
+.videoReplicate{
+    text-align: center;
+}
+
+.white{
+    color: #fff;
+}
 /**/
-/*af6zjhfmrzbxta23uznrfamjfu*/
+/*ofw57ynonrgljeehjp25o6w3za*/

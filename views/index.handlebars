@@ -1,3 +1,21 @@
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container" id="principal">
     <div id="player">
         <audio id="musica" controls>
@@ -15,7 +33,7 @@
     </div>
         
     <div id="prompts">
-        <form id="form" action="/prompts/new" method="post">
+        <form id="form" method="post">
             <div id="form-group">
                 <div id="inputsBasicos">
                     <div id="inputTempoInicio" class="inputTempo">
@@ -78,20 +96,132 @@
                         <button id="btnConfExtras">aplicar configurações</button>
                     </div>
                 </div>
-
             </div>
         
             <div id="promptsExtras">
             </div>
-        
-            <button id="btnGerar" class="btnForm" type="submit">gerar vídeo</button>
+
+            <div class="modal fade" id="gerarVideoModal" tabindex="-1" aria-labelledby="gerarVideoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" id="modalDialogCustom">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="gerarVideoModalLabel">gerar video</h1>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="gerarVideoModalLabel">precisamos apenas de algumas informações:</h4>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <div>
+                                    <label class="labelInputModal" for="linkTokenReplicate">token do replicate</label>
+                                    <input class="inputModal" type="password" id="linkTokenReplicate" name="linkTokenReplicate" placeholder="inserir token do replicate">
+                                </div>
+
+                                <div>
+                                    <label class="labelInputModal" for="emailUsuario">e-mail</label>
+                                    <input class="inputModal" type="text" id="emailUsuario" name="emailUsuario" placeholder="inserir e-mail">
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <div>
+                                    <p>
+                                        OBS: a geração do vídeo pode demorar. também enviaremos o link do vídeo gerado para o email inserido após a conclusão.
+                                    </p>
+                                </div>
+                                <button id="btnGerarVideoModal" class="btnForm" type="submit">gerar video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>    
+
+        {{#if data}}
+            <div id="resposta"> {{data.detail}} </div>
+            <div class="modal fade" id="verificarVideoModal" tabindex="-1" aria-labelledby="verificarVideoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" id="modalDialogCustom">
+                    {{#if data.output}}
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="verificarVideoModalLabel">video pronto!</h1>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="videoReplicate">
+                                    <video autoplay controls>
+                                        <source src={{data.output}} type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                    <button id="btnVerificarVideoModal" class="btnForm" type="submit">verificar video</button>
+                            </div>
+                        </div>
+                       
+                    {{else}}
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="verificarVideoModalLabel">gerar video</h1>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-header">
+                                loading aqui!
+                            </div>
+
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="verificarVideoModalLabel">video sendo gerado...</h4>
+                            </div>
+
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="verificarVideoModalLabel">identificador do vídeo: <span>{{data.id}}</span></h4>
+                            </div>
+
+                            <div class="modal-header">
+                                <p>
+                                    por favor, aguarde alguns minutos enquanto seu vídeo é gerado.
+                                    para verificar se seu vídeo já foi gerado, utilize o campo de busca abaixo junto com o identificador do vídeo.
+                                    o identificador do vídeo gerado também será enviado para o email inserido.
+                                </p>
+                            </div>
+                                        
+                            <form action="/output" method="post">
+                                <div class="modal-body">
+                                    <h6>verificar conclusão do vídeo</h6>
+                                    <div>
+                                        <label class="labelInputModal" for="idVideoReplicate">id do video</label>
+                                        <input class="inputModal" type="text" id="idVideoReplicate" name="idVideoReplicate" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">                            
+                                    </div>
+                                </div>
+                                        
+                                <div class="modal-footer">
+                                    <button id="btnVerificarVideoModal" class="btnForm" type="submit">verificar video</button>
+                            </form>
+
+                                <button id="btnBaixarVideoModal" class="btnForm">baixar projeto</button>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        {{/if}}
+
+        <button id="btnGerar" class="btnForm" data-bs-toggle="modal" data-bs-target="#gerarVideoModal">gerar vídeo</button>
+        <button id="btnRecuperarVideo" class="btnForm" data-bs-toggle="modal" data-bs-target="#verificarVideoModal">gerar vídeo</button>
+        
         
         <div id="divBtnNovoPrompt">
             <button id="btnNovoPrompt" onclick="novoPrompt()" class="btnForm" >+ adicionar entrada</button>
         </div>
     </div>        
 </div>
+
+
 
 <footer id="barraNavegacaoRodape">
   <nav class="navbar navbar-expand-lg" id="navbarRodape">
@@ -107,9 +237,6 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-		
-            
-			
 		</div>
 	</nav>
 </footer>
