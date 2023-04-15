@@ -95,6 +95,11 @@ function excluirPrompt(element){
     promptParaExcluir.parentNode.removeChild(promptParaExcluir);
 }
 
+function configuracoesExtrasGerais(){
+    let inputsExtrasGerais = document.getElementById("inputsExtrasGerais");
+    inputsExtrasGerais.classList.toggle("show");
+}
+
 function exportarPrompt(){
     let promptsInicio = document.querySelectorAll("input[name='inicio']");
     let prompts = document.querySelectorAll("textarea[name='prompt']");

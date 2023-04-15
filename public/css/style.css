@@ -407,6 +407,10 @@ label[for="inputAudioSource"] {
     color: #fff;
 }
 
+#barraNavegacaoRodape a:hover{
+    cursor: pointer;
+}
+
 #navbarRodape{
     height: 60px;
 }

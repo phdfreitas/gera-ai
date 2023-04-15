@@ -79,6 +79,40 @@
                     </div>
                 </div>
             </div>
+
+            <div id="inputsConfiguracoesExtrasGerais">
+                    <div id="inputsExtrasGerais" class="inputsExtrasStyle">
+                        <div class="textInputsExtras">
+                            <span>configurações do video</span>
+                        </div>
+
+                        <span id="btnFechar" class="btnFecharStyle" onclick="configuracoesExtras(this)">
+                            <i class="fa-solid fa-xmark fa-lg" style="color: #fff;"></i>
+                        </span>
+    
+                        <div id="inputExtraAngulo" class="inputExtraRange">
+                            <label for="angulo">ângulo</label>
+                            <input type="range" name="anguloFinal" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraZoom" class="inputExtraRange">
+                            <label for="zoom">zoom</label>
+                            <input type="range" name="zoomFinal" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraEixoX" class="inputExtraRange">
+                            <label for="eixoX">movimento (eixo x)</label>
+                            <input type="range" name="eixoXFinal" min="-4" max="4">
+                        </div>
+    
+                        <div id="inputExtraEixoY" class="inputExtraRange">
+                            <label for="eixoY">movimento (eixo y)</label>
+                            <input type="range" name="eixoYFinal" min="-4" max="4">
+                        </div>
+    
+                        <button id="btnConfExtras">aplicar configurações</button>
+                    </div>
+                </div>
         
             <div id="promptsExtras">
             </div>
@@ -210,7 +244,7 @@
 		<div class="container-fluid">
 			<div class="collapse navbar-collapse">
 				<div class="navbar-nav">
-					<a class="nav-link" href="#">configs</a>
+					<a class="nav-link" onclick="configuracoesExtrasGerais()">configs</a>
 					<a class="nav-link" href="#">letra</a>
 					<a class="nav-link" onclick="exportarPrompt()">exportar</a>
 				</div>
