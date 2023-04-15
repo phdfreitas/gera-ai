@@ -177,8 +177,8 @@ audio::-webkit-media-controls-time-remaining-display {
 #player{
     text-align: center;
     background-color: #444444;
-    border: 1px solid #fff;
     border-radius: 10px;
+    height: 15vh;
 }
 
 #player audio{
@@ -197,8 +197,7 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 20px;
     background-color: #444444;
     height: 100px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .inputTempo{
@@ -235,12 +234,16 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-left: 100px;
 }
 
-#inputPromptText textarea{
+#inputPromptTextStyle{
     background-color: #444444;
     color: #BFBFBF;
-    border: 1px solid #fff;
+    border: 1px solid #8D8D8D;
     border-radius: 5px;
-    padding: 0px; 
+}
+
+
+#inputPromptTextStyle::placeholder{
+    color: #8D8D8D;
 }
 
 /*Input Extra Letra musica*/
@@ -290,7 +293,7 @@ audio::-webkit-media-controls-time-remaining-display {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: 115px;
+    margin-right: 120px;
     margin-bottom: 10px;
     z-index: 1;
     border-radius: 5px;
@@ -503,19 +506,25 @@ audio::-webkit-media-controls-time-remaining-display {
     color: #8D8D8D;
 }
 
-#barraNavegacaoRodape{
+.barraNavegacaoRodapeStyle{
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #444444;
 }
 
-#barraNavegacaoRodape a, label{
+.barraNavegacaoRodapeStyle .iconesBarraRodape{
+    margin-left: 98px;
+    padding: 0;
+}
+
+.barraNavegacaoRodapeStyle a, label{
     color: #fff;
 }
 
-#barraNavegacaoRodape a:hover, label:hover{
+.barraNavegacaoRodapeStyle a:hover, label:hover{
     cursor: pointer;
+    color: #fff;
 }
 
 #navbarRodape{
