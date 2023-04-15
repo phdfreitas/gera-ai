@@ -1,3 +1,41 @@
+/*Player de música*/
+let wavesurfer;
+(function handleAudioPlayer(){
+    let playPauseButton = document.querySelector("#playPauseButton");
+    let stopButton = document.querySelector("#stopButton");
+    let waveform = document.querySelector("#waveform");
+
+    let player = document.querySelector("#player");
+    if(localStorage.getItem("music") == null && player){
+        player.style.display = "none";
+    }
+
+    if(waveform){
+        wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#8D8D8D',
+            progressColor: '#fff',
+            barWidth: 3,
+            barHeight: 3,
+            responsive: true,
+            barRadius: 3,
+            hideScrollbar: true,
+        });
+
+        playPauseButton.addEventListener("click", function(){
+            wavesurfer.playPause();
+        });
+
+        stopButton.addEventListener("click", function(){
+            wavesurfer.stop();
+        });
+
+        wavesurfer.on('finish', function () {
+            wavesurfer.stop();
+        });
+    }
+})()
+
 const novoPrompt = () => {
     
     let inputsBasicos = document.getElementById("inputsBasicos");
@@ -79,9 +117,8 @@ const novoPrompt = () => {
 
         document.addEventListener("DOMContentLoaded", function(){
             if(localStorage.getItem("music")){
-                document.querySelector("#audioSource").src = localStorage.getItem("music");
-                document.querySelector("#musica").load();   
-            }
+                wavesurfer.load(localStorage.getItem("music"));
+            } 
         });
     }
 })()
@@ -165,3 +202,4 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     console.log("DOMContentLoaded");
 });
+
