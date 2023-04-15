@@ -30,17 +30,101 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-right: 10px;
 }
   
+/*Página Inicial*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.homeArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: none;
+}
+/* home */
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+/* navbar */
+.navbar {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px;
+}
+    /* navbar + menu */
+    .navbar .menu{
+        display: flex;
+        width: 335px;
+        height: 23.5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .menu a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #fff;
+    }
+    /* hover do menu */
+    .navbar .menu a:hover{
+        text-decoration: underline;
+    }
+    /* fim navbar + menu */
+.navbar #botao_teste{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #151519;
+}
+.navbar img{
+    width: 60px;
+}
+/* fim navbar */
+.frame {
+    width: 90%;
+    height: 90vh;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* tratamento do frame */
+    background-image: url(assets/frame.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.frame img{
+    width: 250px;
+}
+/**/
 
-#bodyBackground{
+/*Dashboard*/
+
+.dashboard{
     background-color: #1E1E1E;
+    min-height: 100vh;
 }
 
-
-/*Barra de Navegação*/
+/*Barra de Navegação do Dashboard*/
 #mainNav{
     background-color: #444444;
     height: 80px;
     border-bottom: 1px solid #8D8D8D;
+    width: 100%;
 }
 
 #mainNav a{

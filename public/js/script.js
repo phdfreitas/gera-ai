@@ -63,22 +63,27 @@ const novoPrompt = () => {
 }
 
 (function handleMusic() {
-    document.querySelector("#inputAudioSource").addEventListener("change", function(){
-        const fileReader = new FileReader();
+    console.log("handleMusic");
 
-        fileReader.addEventListener("load", function(){
-            localStorage.setItem("music", fileReader.result);
-            window.location.reload();    
+    let inputAudioSource = document.querySelector("#inputAudioSource");
+    if(inputAudioSource){
+        document.querySelector("#inputAudioSource").addEventListener("change", function(){
+            const fileReader = new FileReader();
+
+            fileReader.addEventListener("load", function(){
+                localStorage.setItem("music", fileReader.result);
+                window.location.reload();    
+            });
+            fileReader.readAsDataURL(this.files[0]);
         });
-        fileReader.readAsDataURL(this.files[0]);
-    });
 
-    document.addEventListener("DOMContentLoaded", function(){
-        if(localStorage.getItem("music")){
-            document.querySelector("#audioSource").src = localStorage.getItem("music");
-            document.querySelector("#musica").load();   
-        }
-    });
+        document.addEventListener("DOMContentLoaded", function(){
+            if(localStorage.getItem("music")){
+                document.querySelector("#audioSource").src = localStorage.getItem("music");
+                document.querySelector("#musica").load();   
+            }
+        });
+    }
 })()
 
 function configuracoesExtras(element) {
@@ -137,11 +142,28 @@ function videoReplicateGerando(){
 
 document.addEventListener("DOMContentLoaded", function(){
     let linkReplicate = document.querySelector("#resposta");
+    let home = document.querySelector('.home');
+
     if (linkReplicate != "" && linkReplicate != null) {
         console.log(linkReplicate.innerHTML);
         let btnRecuperarVideo = document.querySelector("#btnRecuperarVideo");
         btnRecuperarVideo.click();
     }
+
+    if (home) {
+        let random = Math.floor(Math.random() * 9);           
+        
+        let allGifs = [
+                'assets/gifs/video1.gif', 'assets/gifs/video2.gif', 'assets/gifs/video3.gif',
+                'assets/gifs/video6.gif', 'assets/gifs/video5.gif', 'assets/gifs/video6.gif',
+                'assets/gifs/video7.gif', 'assets/gifs/video8.gif', 'assets/gifs/video9.gif'
+            ];
+        //atribui o elemento aleatorio ao background-image do elemento home
+        home.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('" + allGifs[random] + "')";
+        home.style.backgroundSize = "cover";
+        home.style.backgroundPosition = "center";
+    }
+    console.log("DOMContentLoaded");
 });
 
 /*
