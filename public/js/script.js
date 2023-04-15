@@ -165,20 +165,3 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     console.log("DOMContentLoaded");
 });
-
-/*
-(function form() {
-    document.querySelector("#form").addEventListener("submit", function(event){
-        event.preventDefault();
-
-        let promptsInicio = document.querySelectorAll("input[name='inicio']");
-        let prompts = document.querySelectorAll("textarea[name='prompt']");
-        let linkReplicate = document.querySelector("input[name='linkTokenReplicate']");
-        let emailUsuario = document.querySelector("input[name='emailUsuario']");
-
-        console.log(promptsInicio);
-        console.log(prompts);
-        console.log(linkReplicate);
-        console.log(emailUsuario);
-    });
-})();*/
