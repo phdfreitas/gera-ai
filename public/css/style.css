@@ -159,6 +159,28 @@ audio::-webkit-media-controls-time-remaining-display {
     padding: 0px; 
 }
 
+/*Input Extra Letra musica*/
+#divAreaLetraMusica textarea{
+    background-color: #444444;
+    color: #BFBFBF;
+    border: 1px solid #8D8D8D;
+    padding: 0px; 
+}
+
+.divInputLetraMusica{
+    margin-top: -50px;
+}
+
+.divBtnAdicionarMusica{
+    margin-top: 12px;
+}
+
+.divBtnAdicionarMusica button{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
 .iconesConfiguracoesExtras, .iconesConfiguracoesExtras1{
     float: left;
     margin-top: -58px;
@@ -198,7 +220,7 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 25px;
 }
 
-#btnNovoPrompt, #btnConfExtras, #btnObterVideo{
+#btnNovoPrompt, #btnConfExtras, #btnObterVideo, .btnAdicionarMusica{
     background-color: #fff;
     color: #000;
     font-weight: 700;
@@ -209,6 +231,7 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-bottom: 20px;
     margin-left: 50px;
 }
+
 
 #btnConfExtras{
     width: 320px;

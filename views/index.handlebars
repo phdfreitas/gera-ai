@@ -153,7 +153,28 @@
                     </div>
                 </div>
             </div>
-        </form>    
+        </form>
+
+        <div id="areaLetraMusica">
+            <div id="divAreaLetraMusica" class="inputsExtrasStyle">
+                <div class="textInputsExtras" style="margin-bottom: 70px;">
+                    <span>adicionar letra da música</span>
+                </div>
+
+                <span id="btnFechar" class="btnFecharStyle" onclick="exibirLetraMusica()">
+                    <i class="fa-solid fa-xmark fa-lg" style="color: #fff;"></i>
+                </span>
+                
+                <div class="divInputLetraMusica">
+                    <label for="letraMusica" style="margin-bottom: 10px;">letra da música</label>
+                    <textarea id="letraMusica" name="letraMusica" rows="19" cols="45"></textarea>
+                </div>
+
+                <div class="divBtnAdicionarMusica">
+                    <button class="btnAdicionarMusica" onclick="exibirLetraMusica()">adicionar</button>
+                </div>
+            </div>
+        </div>    
 
         {{#if data}}
             <div id="resposta"> {{data.detail}} </div>
@@ -245,7 +266,7 @@
 			<div class="collapse navbar-collapse">
 				<div class="navbar-nav">
 					<a class="nav-link" onclick="configuracoesExtrasGerais()">configs</a>
-					<a class="nav-link" href="#">letra</a>
+					<a class="nav-link" onclick="exibirLetraMusica()">letra</a>
 					<a class="nav-link" onclick="exportarPrompt()">exportar</a>
 				</div>
 			</div>

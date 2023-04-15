@@ -100,6 +100,11 @@ function configuracoesExtrasGerais(){
     inputsExtrasGerais.classList.toggle("show");
 }
 
+function exibirLetraMusica(){
+    let letraMusica = document.getElementById("divAreaLetraMusica");
+    letraMusica.classList.toggle("show");
+}
+
 function exportarPrompt(){
     let promptsInicio = document.querySelectorAll("input[name='inicio']");
     let prompts = document.querySelectorAll("textarea[name='prompt']");
