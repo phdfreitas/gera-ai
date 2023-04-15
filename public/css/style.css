@@ -364,14 +364,14 @@ audio::-webkit-media-controls-time-remaining-display {
     display: none;
 }
 
-label[for="inputAudioSource"] {
+/*label[for="inputAudioSource"] {
     padding: 8px 10px;
     background-color: #1E1E1E;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 12px;
-}
+}*/
 
 .divResultadoId{
     margin-top: 50px;
@@ -426,11 +426,11 @@ label[for="inputAudioSource"] {
     background-color: #444444;
 }
 
-#barraNavegacaoRodape a{
+#barraNavegacaoRodape a, label{
     color: #fff;
 }
 
-#barraNavegacaoRodape a:hover{
+#barraNavegacaoRodape a:hover, label:hover{
     cursor: pointer;
 }
 

@@ -4,14 +4,6 @@
             <source type="audio/mp4" id="audioSource">
             Seu navegador não suporta a tag de áudio.
         </audio>
-        
-        <div id="inputFile">
-            <label for="inputAudioSource">
-                <i class="fa-solid fa-music" style="color: #8d8d8d;"></i>
-                Selecione a música
-            </label>
-            <input type="file" id="inputAudioSource" accept="audio/*">
-        </div>
     </div>
         
     <div id="prompts">
@@ -265,6 +257,13 @@
 		<div class="container-fluid">
 			<div class="collapse navbar-collapse">
 				<div class="navbar-nav">
+                    <span class="nav-link">
+                        <label for="inputAudioSource">
+                            music
+                            <!--<i class="fa-solid fa-music" style="color: #8d8d8d;"></i>-->
+                        </label>
+                        <input type="file" id="inputAudioSource" accept="audio/*">
+                    </span>
 					<a class="nav-link" onclick="configuracoesExtrasGerais()">configs</a>
 					<a class="nav-link" onclick="exibirLetraMusica()">letra</a>
 					<a class="nav-link" onclick="exportarPrompt()">exportar</a>
