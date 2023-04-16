@@ -1,35 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
-audio::-webkit-media-controls-panel {
-    background-color: #444444;
-}
-  
-audio::-webkit-media-controls-play-button {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-  
-audio::-webkit-media-controls-timeline {
-  height: 5px;
-  background-color: #444444 !important;
-  border-radius: 5px;
-}
-  
-audio::-webkit-media-controls-timeline-viewport {
-  height: 15px;
-  background-color: #444444;
-}
 
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    color: #fff;
-    font-size: 16px;
-    margin-right: 10px;
-}
-  
 /*Página Inicial*/
 *{
     margin: 0px;
@@ -662,4 +633,54 @@ audio::-webkit-media-controls-time-remaining-display {
     color: #fff;
 }
 /**/
+
+
+
+.titleAudioInputHomeTitle{
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: none;
+    letter-spacing: 0.05em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.divAudioInputHome{
+    width: 100%;
+    margin-top: 20px;
+}	
+
+.audioInputHome{
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-top: 12px;
+    color: #8D8D8D;
+    border: 1px solid #8D8D8D;
+    border-radius: 5px;
+}
+
+.audioInputHome svg{
+    margin-left: 332px;
+    margin-right: 10px;
+}
+
+.btnSemAudioInputHome{
+    margin-top: 25px;
+}
+
+.modal-footer .divSeparation{
+    width: 100%;
+}
+
+.divSeparation{
+    color: #8D8D8D;
+}
+
+.linkReplicateInputHome{
+    color: #fff;
+    font-size: 18px;
+}
+
 /*zbybvmlixjhgbllqtom53nn4mm*/

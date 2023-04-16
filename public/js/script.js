@@ -103,6 +103,9 @@ const novoPrompt = () => {
 (function handleMusic() {
     console.log("handleMusic");
 
+    let rota = window.location.pathname;
+
+
     let inputAudioSource = document.querySelector("#inputAudioSource");
     if(inputAudioSource){
         document.querySelector("#inputAudioSource").addEventListener("change", function(){
@@ -110,7 +113,11 @@ const novoPrompt = () => {
 
             fileReader.addEventListener("load", function(){
                 localStorage.setItem("music", fileReader.result);
-                window.location.reload();    
+                
+                if (rota != "/") {
+                    window.location.reload();     
+                } 
+                
             });
             fileReader.readAsDataURL(this.files[0]);
         });
@@ -202,4 +209,3 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     console.log("DOMContentLoaded");
 });
-
