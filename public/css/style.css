@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
 
 /*Página Inicial*/
 *{
@@ -683,4 +700,16 @@
     font-size: 18px;
 }
 
+/*Animação Loading*/
+.loading{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #444444;
+    border-top-color: #BFBFBF;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+/**/
 /*zbybvmlixjhgbllqtom53nn4mm*/
