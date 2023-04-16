@@ -52,7 +52,7 @@ const novoPrompt = () => {
     spanPai.classList.remove("displayNoneElement");
 
     let divIcones = document.createElement("div");
-    divIcones.setAttribute("class", "iconesConfiguracoesExtras1");
+    divIcones.setAttribute("class", "iconesConfiguracoesExtras");
 
     let span1 = document.createElement("span");
     span1.innerHTML = span.innerHTML;
@@ -209,3 +209,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     console.log("DOMContentLoaded");
 });
+
+function continuarSemMusica(){
+    localStorage.removeItem("music");
+    window.location.href = "/dashboard";
+}
