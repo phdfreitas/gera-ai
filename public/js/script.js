@@ -214,3 +214,15 @@ function continuarSemMusica(){
     localStorage.removeItem("music");
     window.location.href = "/dashboard";
 }
+
+function inserirToken(){
+    let token = document.querySelector("#linkTokenReplicate").value;
+    localStorage.setItem("replicate", token);
+    console.log(token);
+}
+
+function enviaTokenReplicate(){
+    let token = localStorage.getItem("replicate");
+    let linkReplicate = document.querySelector("#linkReplicateIdVideoReplicate");
+    linkReplicate.value = token;
+}

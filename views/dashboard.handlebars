@@ -177,7 +177,7 @@
                                         OBS: a geração do vídeo pode demorar. também enviaremos o link do vídeo gerado para o email inserido após a conclusão.
                                     </p>
                                 </div>
-                                <button id="btnGerarVideoModal" class="btnForm" type="submit">gerar video</button>
+                                <button id="btnGerarVideoModal" class="btnForm" type="submit" onclick="inserirToken()">gerar video</button>
                             </div>
                         </div>
                     </div>
@@ -265,11 +265,19 @@
                                     <div>
                                         <label class="labelInputModal" for="idVideoReplicate">id do video</label>
                                         <input class="inputModal" type="text" id="idVideoReplicate" name="idVideoReplicate" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">                            
+                                    
+                                        <input 
+                                            class="inputModal" 
+                                            type="text" 
+                                            id="linkReplicateIdVideoReplicate" 
+                                            name="linkReplicateIdVideoReplicate"
+                                            style="display: none;"
+                                            >                            
                                     </div>
                                 </div>
                                         
                                 <div class="modal-footer">
-                                    <button id="btnVerificarVideoModal" class="btnForm" type="submit">verificar video</button>
+                                    <button id="btnVerificarVideoModal" class="btnForm" type="submit" onclick="enviaTokenReplicate()">verificar video</button>
                             </form>
 
                                 <button id="btnBaixarVideoModal" class="btnForm">baixar projeto</button>

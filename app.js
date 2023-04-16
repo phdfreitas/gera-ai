@@ -22,7 +22,7 @@ app.set('view engine', 'handlebars');
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// rota pra pagina inicial - useless por enquanto.
+// rota pra pagina inicial
 app.get('/', (req, res) => {
     res.render('home');
 });
@@ -116,9 +116,7 @@ app.post('/dashboard', (req, res) => {
     });
     
     response.then(res => res.json())
-    .then(data => {  
-        console.log('data: ', data);
-        console.log('ID: ', data.id);
+    .then(data => {
         res.render('dashboard', {data});
     }).catch(error => {
         res.send('Error: ' + error);
@@ -127,18 +125,17 @@ app.post('/dashboard', (req, res) => {
 
 // rota para a página de output do video gerado pelo usuário
 app.post('/output', (req, res) => {
-    const {idVideoReplicate} = req.body;
+    const {idVideoReplicate, linkReplicateIdVideoReplicate} = req.body;
 
     const newResponse = fetch(`https://api.replicate.com/v1/predictions/${idVideoReplicate}`, {
         "headers": {
-        "Authorization": "Token 903a7051d313d01c2042b60dd76085e74c82749f",
+        "Authorization": `Token ${linkReplicateIdVideoReplicate}`,
         "Content-Type": "application/json"
         }
     })
 
     newResponse.then(res => res.json())
     .then(data => {
-        console.log(data)
         res.render('dashboard', {data});
     });
 })
