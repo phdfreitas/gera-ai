@@ -160,8 +160,8 @@ function configuracoesExtras(element) {
 }
 
 function configuracoesExtrasFechar(element){
-
-    let pai = element.parentNode.parentNode
+    
+    let pai = element.parentNode.parentNode.parentNode
     if (pai.childNodes.length > 3) {
         pai.childNodes[8].classList.toggle("show");
     }

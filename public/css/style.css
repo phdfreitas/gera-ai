@@ -312,7 +312,7 @@
     margin-top: 25px;
 }
 
-#btnNovoPrompt, .btnConfExtras, #btnObterVideo, .btnAdicionarMusica{
+#btnNovoPrompt, #btnObterVideo, .btnAdicionarMusica{
     background-color: #fff;
     color: #000;
     font-weight: 700;
@@ -324,11 +324,20 @@
     margin-left: 50px;
 }
 
-
 .btnConfExtras{
-    width: 320px;
-    margin-left: 0;
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.btnConfExtras span{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
 #btnObterVideo{
@@ -348,7 +357,7 @@
     color: #fff;
     padding: 25px;
     transition: all 0.25s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .inputsExtrasStyle.show{
@@ -359,10 +368,31 @@
     right: -400px;
 }
 
-.inputsExtrasStyle, .inputExtraRange{
+.inputsExtrasStyle{
     text-align: justify;
     color: #8D8D8D;
     margin-bottom: 10px;
+}
+
+.inputExtraRange input{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 2px;
+    width: 100%;
+    background-color: #444444;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+}
+
+.inputExtraRange input::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    background-color: #8D8D8D;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .inputsExtrasStyle select{
@@ -373,11 +403,6 @@
     border-radius: 5px;
     margin-bottom: 10px;
     color: #8D8D8D;
-}
-
-.inputsExtrasStyle .inputExtraRange input{
-    width: 100%;
-    padding: 8px;
 }
 
 .inputsExtrasStyle .btnFecharStyle{
@@ -859,7 +884,7 @@
     color: #fff;
     font-size: 18px;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 
 .tempoInicial{
