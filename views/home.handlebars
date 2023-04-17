@@ -3,27 +3,153 @@
     <!-- navbar -->
     <div class="navbar">
         <!-- logo -->
-        <img src="assets/logoMenor.png" alt="Logo geraAi">
+        <img src="assets/static/logoMenor.png" alt="Logo geraAi">
         <!-- menu -->
         <div class="menu">
-            <a href="/">inicio</a>
-            <a href="">projetos</a>
-            <a href="">tutoriais</a>
-            <a href="">galeria</a>
+            <a href="#home">inicio</a>
+            <a href="#projeto">projetos</a>
+            <a href="#exemplo">tutoriais</a>
+            <a href="#galeria">galeria</a>
         </div>
-
         <!-- botao -->
         <a id="botao_teste" data-bs-toggle="modal" data-bs-target="#testeAgoraModal">teste agora</a>
     </div>
     <!-- frame -->
     <div class="frame">
         <!-- logo principal  -->
-        <img src="assets/logoCentral.png" alt="logo central geraAi">
+        <img src="assets/static/frameE.png" alt="">
+        <div class="deflex">
+            <img src="assets/static/logoCentral.png" alt="logo central geraAi" class="imagemLogo">
+            <!-- footer -->
+            <div class="footer">
+                <a href="#projeto">conheça o projeto</a>
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                </span>
+            </div>
+        </div>
+        <img src="assets/static/frameD.png" alt="">
     </div>
-    <!-- footer -->
-    <div class="footer">
-        <h1>conheça o projeto</h1>
-        <i>icone</i>
+
+    <div class="corretivo">
+
+    </div>
+
+    <!-- pagina conteudo -->
+    <div class="conteudo">
+        <!-- projeto -->
+        <div class="projeto">
+            <div class="header" id="projeto">
+                <h1>/ o projeto</h1>
+            </div>
+                <p>o <span>gera.ai</span> é uma ferramenta para <span>criação</span> <br><span>de vídeos</span> de forma simples e objetiva <br><br>com o gera.ai você pode <span>criar</span>, <br><span>personalizar</span> e <span>gerar videos</span> em minutos <br><br>com apenas <span>poucos passos</span> você é capaz <br>de criar uma animação <br><br>e de forma automatizada, o vídeo final é <br>gerado por <span>inteligência artificial</span></p>
+                <h2>como funciona?</h2>
+            <!-- numero 1 -->
+            <div class="flex">
+                <img src="assets/static/1.png" alt="numero 1">
+                <p>você inicia um novo projeto com ou sem áudio (será utilizado no vídeo)</p>
+            </div>
+            <!-- numero 2  -->
+            <div class="flex">
+                <img src="assets/static/2.png" alt="numero 2">
+                <p>adiciona uma sequência de entradas contendo <span>tempo de início</span> e <span>texto</span><br><span>descritivo,</span> representando quando e o que deve ser mostrado no vídeo </p>
+            </div>
+            <!-- numero 3 -->
+            <div class="flex">
+                <img src="assets/static/3.png" alt="numero 3">
+                <p>adiciona algumas configurações de vídeo como <span>zoom, velocidade de <br>transição, ângulo,</span> e muitas outras....</p>
+            </div>
+            <!-- numero 4 -->
+            <div class="flex">
+                <img src="assets/static/4.png" alt="numero 4">
+                <p>selecionar para gerar o video, aguardar alguns minutos enquanto a <br>inteligência artificial trabalha e... <span>vídeo pronto!</span></p>
+            </div>
+        </div>
+
+        <!-- exemplo -->
+        <div class="exemplo">
+            <div class="header" id="exemplo">
+                <h1>exemplos /</h1>
+            </div>
+            <p>aqui você encontra alguns exemplos de <br>como utilizar o <span>gera.ai</span></p>
+            <!-- carrossel de 4 videos da galeria -->
+            <div class="flex">
+                <div class="carousel-controls">
+                    <div class="prev-arrow"><img src="assets/static/esquerda.png" alt="Previous"></div>
+                </div>
+                <div class="video-carousel">
+                    <div class="video-container">
+                      <div class="video-item video-item-1">
+                            <video src="video_1.mp4" controls></video>
+                            <div class="under_texto">
+                                <p><span>configuração: zoom</span></p>
+                                <p>aplicando configuração ao prompt</p>
+                            </div>
+                      </div>
+                      <div class="video-item video-item-2">
+                            <video src="video_2.mp4" controls></video>
+                            <div class="under_texto">
+                                <p><span>configuração: ângulo</span></p>
+                                <p>aplicando configuração ao prompt</p>
+                            </div>
+                      </div>
+                      <div class="video-item video-item-3">
+                            <video src="video_3.mp4" controls></video>
+                            <div class="under_texto">
+                                <p><span>áudio</span></p>
+                                <p>adicionando o áudio ao vídeo</p>
+                            </div>
+                      </div>
+                      <div class="video-item video-item-4">
+                        <video src="video_4.mp4" controls></video>
+                        <div class="under_texto">
+                            <p><span>áudio</span></p>
+                            <p>adicionando o áudio ao vídeo</p>
+                        </div>
+                  </div>
+                      <!-- Adicione mais vídeos aqui -->
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                  <div class="next-arrow"><img src="assets/static/direita.png" alt="Next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- galeria -->
+        <div class="galeria">
+            <div class="header" id="galeria">
+                <h1>/ galeria</h1>
+            </div>
+            <p>conjunto de animações que criamos <br>utilizando o <span>gera.ai</span></p>
+            <!-- slide 01 -->
+            <div class="slide">
+                <div class="conteudo_slide">
+                    <video src="video_4.mp4" controls></video>
+                    <div class="side_texto">
+                        <p><span>vambora</span><br>adriana calcanhoto</p>
+                    </div>
+                </div>
+            </div>
+            <!-- slide 02 -->
+            <div class="slide">
+                <div class="conteudo_slide">
+                    <div class="side_texto">
+                        <p><span>vambora</span><br>adriana calcanhoto</p>
+                    </div>
+                    <video src="video_4.mp4" controls></video>
+                </div>
+            </div>
+            <!-- slide 03 -->
+            <div class="slide">
+                <div class="conteudo_slide">
+                    <video src="video_4.mp4" controls></video>
+                    <div class="side_texto">
+                        <p><span>vambora</span><br>adriana calcanhoto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
