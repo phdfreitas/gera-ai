@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 
 @keyframes spin {
     0% {
@@ -62,8 +62,13 @@
     }
     .navbar .menu a{
         text-decoration: none;
-        font-size: 14px;
-        color: #fff;
+        color: #f5f5f5;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        padding-bottom: 3px;
     }
     /* hover do menu */
     .navbar .menu a:hover{
@@ -72,11 +77,15 @@
     /* fim navbar + menu */
 .navbar #botao_teste{
     text-decoration: none;
-    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    padding: 8px 16px;
-    background-color: #fff;
-    color: #151519;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
+    border-radius: 4px;
 }
 
 #botao_teste:hover{
@@ -116,14 +125,18 @@
 #mainNav{
     background-color: #444444;
     height: 80px;
-    border-bottom: 1px solid #8D8D8D;
+    border-bottom: 1px solid #f5f5f5;
     width: 100%;
 }
 
 #mainNav a{
-    color: #fff;
-    font-size: 1.3em;
+    color: #F5F5F5;
+    font-size: 16px;
     font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.05em;
     text-decoration: none;
 }
 
@@ -154,7 +167,7 @@
     font-size: 3em;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
-    color: #fff;
+    color: #f5f5f5;
 }
 /**/
 
@@ -219,8 +232,8 @@
     width: 60%;
     line-height: 0.5;
     background: transparent;
-    border: 1px solid #8D8D8D;
-    border-radius: 5px;
+    border: 1px solid #454545;
+    border-radius: 4px;
     color: #fff;
     margin-top: 5px;
 }
@@ -242,20 +255,20 @@
 #inputPromptTextStyle{
     background-color: #444444;
     color: #BFBFBF;
-    border: 1px solid #8D8D8D;
-    border-radius: 5px;
+    border: 1px solid #454545;
+    border-radius: 4px;
 }
 
 
 #inputPromptTextStyle::placeholder{
-    color: #8D8D8D;
+    color: #bfbfbf;
 }
 
 /*Input Extra Letra musica*/
 #divAreaLetraMusica textarea{
     background-color: #444444;
     color: #BFBFBF;
-    border: 1px solid #8D8D8D;
+    border: 1px solid #444444;
     padding: 0px; 
 }
 
@@ -288,11 +301,14 @@
 }
 
 #btnGerar{
-    background-color: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    padding: 6px 18px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
     border: none;
     cursor: pointer;
     position: fixed;
@@ -301,7 +317,7 @@
     margin-right: 120px;
     margin-bottom: 10px;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 #divBtnNovoPrompt{
@@ -313,15 +329,19 @@
 }
 
 #btnNovoPrompt, .btnConfExtras, #btnObterVideo, .btnAdicionarMusica{
-    background-color: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
     border: none;
     cursor: pointer;
     margin-bottom: 20px;
     margin-left: 50px;
+    border-radius: 4px;
 }
 
 
@@ -369,8 +389,8 @@
     width: 100%;
     padding: 8px;
     background: transparent;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #454545;
+    border-radius: 4px;
     margin-bottom: 10px;
     color: #8D8D8D;
 }
@@ -411,7 +431,7 @@
     margin-top: 15px;
     margin-right: 60px;
     margin-bottom: 25px;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #444444;
     width: 30%;
     float: right;
 }
@@ -551,7 +571,8 @@
     border: none;
 }
 
-#modalDialogCustom .modal-header h1{
+#modalDialogCustom .modal-header h1, .modal-title {
+    color: #F5F5F5;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -565,7 +586,8 @@
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 32px;    
     letter-spacing: 0.05em;
 }
 
@@ -589,20 +611,27 @@
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 32px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.05em;
     display: block;
+    padding-bottom: 8px;
 }
 
 .inputModal{
     width: 100%;
     padding: 8px;
     background: transparent;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #454545;
+    border-radius: 4px;
     margin-bottom: 10px;
-    color: #fff;
+    color: #BFBFBF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
 }
 
 #modalDialogCustom .modal-footer{
@@ -615,8 +644,9 @@
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.05em;
+    line-height: 140%;
     padding: 0;
     margin: 0;
     text-align: justify;
@@ -627,15 +657,18 @@
 }
 
 #modalDialogCustom .modal-footer button{
-    background-color: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    padding: 6px 18px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 0 auto;
 }
 
@@ -643,10 +676,13 @@
     background: transparent;
     color: #F5F5F5;
     border: 1px solid #F5F5F5;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    padding: 6px 18px;
-    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
+    border-radius: 4px;
     cursor: pointer;
     width: 100%;
     margin: 12px auto;
@@ -664,11 +700,13 @@
 
 
 .titleAudioInputHomeTitle{
-    color: #8D8D8D;
-    font-size: 14px;
-    font-weight: none;
-    letter-spacing: 0.05em;
+    color: #BFBFBF;
     font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
 }
 
 .divAudioInputHome{
@@ -680,17 +718,18 @@
     width: 100%;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 0.05em;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
     padding: 10px;
     margin-top: 12px;
-    color: #8D8D8D;
-    border: 1px solid #8D8D8D;
-    border-radius: 5px;
+    color: #bfbfbf;
+    border: 1px solid #454545;
+    border-radius: 4px;
 }
 
 .audioInputHome svg{
-    margin-left: 315px;
-    margin-right: 10px;
+    margin-left: 314px;
+    /* margin-right: 10px; */
 }
 
 .btnSemAudioInputHome{
@@ -744,8 +783,8 @@
         width: 60%;
         line-height: 0.5;
         background: transparent;
-        border: 1px solid #8D8D8D;
-        border-radius: 5px;
+        border: 1px solid #454545;
+        border-radius: 4px;
         color: #fff;
         margin-top: 5px;
     }
@@ -803,6 +842,15 @@
     position: relative;
     color: #BFBFBF;
 }
+
+.separadorModalHome p {
+    color: #bfbfbf;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+}
   
 .separadorModalHome:before,
 .separadorModalHome:after {
@@ -811,7 +859,7 @@
     width: 40%;
     margin: 0 15px;
     content: "";
-    border-top: 1px solid #BFBFBF;
+    border-top: 1px solid #454545;
 }
   
 .separadorModalHome:before {
@@ -825,32 +873,38 @@
 .conferirVideoTitulo{
     color: #F5F5F5;
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.07em;
-    font-weight: 300;
-    font-size: 0.9em;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    line-height: 140%;
+    font-size: 16px;
     margin-left: 15px;
 }
 
 .modalHomeRopape p{
-    color: #8D8D8D;
+    color: #bfbfbf;
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.07em;
-    font-weight: 200;
-    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
     text-align: left;
     margin-left: 15px;
 }
 
 .modalHomeRopape button{
-    background-color: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    padding: 6px 18px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    padding: 12px 18px;
     border: none;
     cursor: pointer;
     width: 95%;
-    border-radius: 5px;
+    border-radius: 4px;
     margin-left: 15px;
     margin-bottom: 20px;
 }
