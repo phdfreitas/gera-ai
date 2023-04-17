@@ -5,6 +5,12 @@ let wavesurfer;
     let stopButton = document.querySelector("#stopButton");
     let waveform = document.querySelector("#waveform");
 
+    let tempoAtualMusicPlayer = document.querySelector("#tempoAtualMusicPlayer");
+    let tempoInicialMusicPlayer = document.querySelector("#tempoInicialMusicPlayer");
+    let playSvg = document.querySelector("#playSvg");
+    let pauseSvg = document.querySelector("#pauseSvg");
+
+
     let player = document.querySelector("#player");
     if(localStorage.getItem("music") == null && player){
         player.style.display = "none";
@@ -23,10 +29,34 @@ let wavesurfer;
         });
 
         playPauseButton.addEventListener("click", function(){
+            tempoInicialMusicPlayer.classList.remove("displayNoneElement");
+            
+            let tempoTotal = wavesurfer.getDuration();
+
+            if(tempoTotal > 59){
+                let minutos = Math.floor(tempoTotal / 60);
+                let segundos = Math.floor(tempoTotal % 60);
+                tempoAtualMusicPlayer.innerHTML = `${minutos}:${segundos}`;
+            }
+            else{
+                tempoAtualMusicPlayer.innerHTML = `0:${Math.floor(tempoTotal)}`;
+            }
+            
+            if(playSvg.classList.contains("displayNoneElement")){
+                playSvg.classList.remove("displayNoneElement");
+                pauseSvg.classList.add("displayNoneElement");
+            }
+            else{
+                playSvg.classList.add("displayNoneElement");
+                pauseSvg.classList.remove("displayNoneElement");
+            }
+
             wavesurfer.playPause();
         });
 
         stopButton.addEventListener("click", function(){
+            playSvg.classList.remove("displayNoneElement");
+            pauseSvg.classList.add("displayNoneElement");
             wavesurfer.stop();
         });
 

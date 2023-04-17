@@ -855,5 +855,25 @@
     margin-bottom: 20px;
 }
 
+.tempoInicial, .tempoTotal{
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    z-index: 3;
+}
+
+.tempoInicial{
+    left: 0;
+    margin-top: -25px;
+    margin-left: 150px;
+}
+
+.tempoTotal{
+    right: 0;
+    margin-top: -25px;
+    margin-right: 150px;
+}
+
+
 /**/
 /*zbybvmlixjhgbllqtom53nn4mm*/
