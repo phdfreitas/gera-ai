@@ -36,6 +36,11 @@
             </div>
                             
             <div class="modal-body">
+                <div style="text-align: center;" id="alertaMusicaNaoAdicionada" class="alert alert-danger displayNoneElement" role="alert">
+                    <strong>
+                        Adicione uma música para continuar!
+                    </strong>
+                </div>
                 <div class="titleAudioInputHomeTitle">fazer upload da faixa de áudio</div>
                 <div class="divAudioInputHome">
                     <label for="inputAudioSource">
@@ -52,7 +57,7 @@
             </div>
                             
             <div class="modal-footer">
-                <button class="btnForm" style="width: 98%;" onclick="window.location.href='/dashboard'">adicionar audio</button>
+                <button class="btnForm" style="width: 98%;" onclick="adicionarAudio()">adicionar audio</button>
                 <button id="btnBaixarVideoModal" style="width: 98%;" onclick="continuarSemMusica()">continuar sem audio</button>
             </div>
             

@@ -79,8 +79,6 @@ const novoPrompt = () => {
     novaDivInputExtras.setAttribute("class", "inputsExtrasStyle");
     novaDivInputExtras.innerHTML = inputExtras.innerHTML;
 
-    console.log(novaDivInputExtras.childNodes);
-
     novaDivInputExtras.childNodes[3].setAttribute("id", "btnFechar" + (totalSpan + 1));
     novaDivInputExtras.childNodes[3].setAttribute("class", "btnFecharStyle");
     novaDivInputExtras.childNodes[3].setAttribute("onclick", "configuracoesExtras(this)");
@@ -101,10 +99,8 @@ const novoPrompt = () => {
 }
 
 (function handleMusic() {
-    console.log("handleMusic");
-
+    
     let rota = window.location.pathname;
-
 
     let inputAudioSource = document.querySelector("#inputAudioSource");
     if(inputAudioSource){
@@ -131,8 +127,7 @@ const novoPrompt = () => {
 })()
 
 function configuracoesExtras(element) {
-    console.log(element.id);
-
+    
     let idValue = element.id.length < 12 ? element.id.substring(9) : element.id.substring(12);
 
     let inputsExtras = document.getElementById("inputsExtras" + idValue);
@@ -176,12 +171,6 @@ function exportarPrompt(){
     document.body.appendChild(download);
     download.click();
     document.body.removeChild(download);
-
-    console.log(resultadoFinal);
-}
-
-function videoReplicateGerando(){
-    console.log("videoReplicateGerando");
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -189,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let home = document.querySelector('.home');
 
     if (linkReplicate != "" && linkReplicate != null) {
-        console.log(linkReplicate.innerHTML);
         let btnRecuperarVideo = document.querySelector("#btnRecuperarVideo");
         btnRecuperarVideo.click();
     }
@@ -207,8 +195,19 @@ document.addEventListener("DOMContentLoaded", function(){
         home.style.backgroundSize = "cover";
         home.style.backgroundPosition = "center";
     }
-    console.log("DOMContentLoaded");
 });
+
+function adicionarAudio(){
+    let music = localStorage.getItem("music");
+    let alertaMusicaNaoAdicionada = document.querySelector("#alertaMusicaNaoAdicionada");
+    
+    if(music){
+        window.location.href = "/dashboard";
+    }
+    else{
+        alertaMusicaNaoAdicionada.classList.remove("displayNoneElement");
+    }
+}
 
 function continuarSemMusica(){
     localStorage.removeItem("music");
@@ -218,7 +217,6 @@ function continuarSemMusica(){
 function inserirToken(){
     let token = document.querySelector("#linkTokenReplicate").value;
     localStorage.setItem("replicate", token);
-    console.log(token);
 }
 
 function enviaTokenReplicate(){
