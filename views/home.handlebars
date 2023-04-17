@@ -52,34 +52,36 @@
             </div>
                             
             <div class="modal-footer">
-                <button class="btnForm" onclick="window.location.href='/dashboard'">adicionar audio</button>
-                <button id="btnBaixarVideoModal" onclick="continuarSemMusica()">continuar sem audio</button>
+                <button class="btnForm" style="width: 98%;" onclick="window.location.href='/dashboard'">adicionar audio</button>
+                <button id="btnBaixarVideoModal" style="width: 98%;" onclick="continuarSemMusica()">continuar sem audio</button>
             </div>
             
-            <p>ou</p>
+            <p class="separadorModalHome">ou</p>
 
-            <div class="modal-header">
-                <h1 class="modal-title">
-                    <p>já gerou um vídeo?</p>
-                    <p>confira se está pronto!</p>
-                </h1>
+            <div>
+                <div class="conferirVideoTitulo">
+                    já gerou um vídeo?
+                </div>
+                <div class="conferirVideoTitulo">
+                    confira se está pronto!
+                </div>
             </div>
             
             <form action="/output" method="post">
                 <div class="modal-body">
-                    <h6>verificar conclusão do vídeo</h6>
                     <div>
                         <label class="labelInputModal" for="idVideoReplicate">id do video</label>
                         <input class="inputModal" type="text" id="idVideoReplicate" name="idVideoReplicate" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">                            
                     </div>
                 </div>
                                         
-                <div class="modal-footer">
-                    <button id="btnVerificarVideoModal" class="btnForm" type="submit">verificar video</button>
-
+                <div class="modalHomeRopape">
                     <p>
                         OBS: o identificador do vídeo foi enviado para email inserido na criação do vídeo.
                     </p>
+                    <button type="submit">verificar video</button>
+
+                    
                 </div>
             </form>
         </div>

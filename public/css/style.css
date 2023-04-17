@@ -78,6 +78,11 @@
     background-color: #fff;
     color: #151519;
 }
+
+#botao_teste:hover{
+    cursor: pointer;
+}
+
 .navbar img{
     width: 60px;
 }
@@ -122,8 +127,13 @@
     text-decoration: none;
 }
 
-#brand{
-    margin-left: 15px;
+.returnHome{
+    margin-left: 20px;
+}
+
+.brand{
+    position: absolute;
+    right: 0;
 }
 
 #navbarNavAltMarkup{
@@ -671,7 +681,7 @@
     font-family: 'Raleway', sans-serif;
     letter-spacing: 0.05em;
     font-size: 14px;
-    padding: 10px 0;
+    padding: 10px;
     margin-top: 12px;
     color: #8D8D8D;
     border: 1px solid #8D8D8D;
@@ -679,7 +689,7 @@
 }
 
 .audioInputHome svg{
-    margin-left: 332px;
+    margin-left: 315px;
     margin-right: 10px;
 }
 
@@ -786,6 +796,63 @@
         margin-top: 10px;
         margin-left: 0;
     }
+}
+
+.separadorModalHome {
+    text-align: center;
+    position: relative;
+    color: #BFBFBF;
+}
+  
+.separadorModalHome:before,
+.separadorModalHome:after {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    margin: 0 15px;
+    content: "";
+    border-top: 1px solid #BFBFBF;
+}
+  
+.separadorModalHome:before {
+  left: 0;
+}
+  
+.separadorModalHome:after {
+  right: 0;
+}
+  
+.conferirVideoTitulo{
+    color: #F5F5F5;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.07em;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-left: 15px;
+}
+
+.modalHomeRopape p{
+    color: #8D8D8D;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.07em;
+    font-weight: 200;
+    font-size: 0.8em;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.modalHomeRopape button{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 18px;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-bottom: 20px;
 }
 
 /**/
