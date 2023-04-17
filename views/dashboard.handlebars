@@ -32,6 +32,11 @@
     </div>
         
     <div id="prompts">
+        <div style="text-align: center;" id="naoPermiteExcluirPrimeiroPrompt" class="alert alert-danger displayNoneElement" role="alert">
+            <strong>
+                Você não pode exluir o primeiro prompt!
+            </strong>
+        </div>
         <form id="form" method="post">
             <div id="form-group">
                 <div id="inputsBasicos">
@@ -105,7 +110,7 @@
                             <input type="range" name="eixoY" min="-4" max="4">
                         </div>
     
-                        <button class="btnConfExtras">aplicar configurações</button>
+                        <span class="btnConfExtras" onclick="configuracoesExtrasFechar(this)">aplicar configurações</span>
                     </div>
                 </div>
             </div>
@@ -142,7 +147,7 @@
                             <input type="range" name="eixoYFinal" min="-4" max="4">
                         </div>
     
-                        <button class="btnConfExtras">aplicar configurações</button>
+                        <span class="btnConfExtras" onclick="configuracoesExtrasGerais()">aplicar configurações</span>
                     </div>
                 </div>
         

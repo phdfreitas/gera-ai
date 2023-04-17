@@ -48,9 +48,6 @@ const novoPrompt = () => {
     let totalSpan = document.querySelectorAll("span").length;
     let span = document.getElementById("configuracoesExtras");
     
-    let spanPai = span.parentNode;
-    spanPai.classList.remove("displayNoneElement");
-
     let divIcones = document.createElement("div");
     divIcones.setAttribute("class", "iconesConfiguracoesExtras");
 
@@ -69,8 +66,6 @@ const novoPrompt = () => {
 
     novaDiv.appendChild(divIcones);
     /**/
-
-    spanPai.classList.add("displayNoneElement");
 
     let inputExtras = document.querySelector("#inputsExtras");
     
@@ -134,9 +129,31 @@ function configuracoesExtras(element) {
     inputsExtras.classList.toggle("show");
 }
 
+function configuracoesExtrasFechar(element){
+
+    let pai = element.parentNode.parentNode
+    if (pai.childNodes.length > 3) {
+        pai.childNodes[8].classList.toggle("show");
+    }
+    else{
+        pai.childNodes[1].classList.toggle("show");
+    }
+}
+
 function excluirPrompt(element){
     let promptParaExcluir = element.parentNode.parentNode.parentNode.parentNode;
-    promptParaExcluir.parentNode.removeChild(promptParaExcluir);
+    
+    if (promptParaExcluir.id == "form") {
+        let naoPermiteExcluirPrimeiroPrompt = document.getElementById("naoPermiteExcluirPrimeiroPrompt");
+        naoPermiteExcluirPrimeiroPrompt.classList.remove("displayNoneElement");
+
+        setTimeout(() => {
+            naoPermiteExcluirPrimeiroPrompt.classList.add("displayNoneElement");
+        }, 3000);
+    }
+    else{
+        promptParaExcluir.parentNode.removeChild(promptParaExcluir);
+    }
 }
 
 function configuracoesExtrasGerais(){
