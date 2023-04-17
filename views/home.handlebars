@@ -74,45 +74,79 @@
             <p>aqui você encontra alguns exemplos de <br>como utilizar o <span>gera.ai</span></p>
             <!-- carrossel de 4 videos da galeria -->
             <div class="flex">
-                <div class="carousel-controls">
-                    <div class="prev-arrow"><img src="assets/static/esquerda.png" alt="Previous"></div>
-                </div>
-                <div class="video-carousel">
-                    <div class="video-container">
-                      <div class="video-item video-item-1">
-                            <video src="video_1.mp4" controls></video>
-                            <div class="under_texto">
-                                <p><span>configuração: zoom</span></p>
-                                <p>aplicando configuração ao prompt</p>
-                            </div>
-                      </div>
-                      <div class="video-item video-item-2">
-                            <video src="video_2.mp4" controls></video>
-                            <div class="under_texto">
-                                <p><span>configuração: ângulo</span></p>
-                                <p>aplicando configuração ao prompt</p>
-                            </div>
-                      </div>
-                      <div class="video-item video-item-3">
-                            <video src="video_3.mp4" controls></video>
-                            <div class="under_texto">
-                                <p><span>áudio</span></p>
-                                <p>adicionando o áudio ao vídeo</p>
-                            </div>
-                      </div>
-                      <div class="video-item video-item-4">
-                        <video src="video_4.mp4" controls></video>
-                        <div class="under_texto">
-                            <p><span>áudio</span></p>
-                            <p>adicionando o áudio ao vídeo</p>
-                        </div>
-                  </div>
-                      <!-- Adicione mais vídeos aqui -->
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     </div>
-                </div>
-                <div class="carousel-controls">
-                  <div class="next-arrow"><img src="assets/static/direita.png" alt="Next"></div>
-                </div>
+                    <div class="carousel-inner" id="carouselExmapleHome">
+                        <div class="carousel-item active" id="carouselExampleItem1">
+                            <div class="video-item video-item-1 correcaoVideoExample">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+
+                            <div class="video-item video-item-1 correcaoVideoExample correcaoVideoExampleCentral">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+
+                            <div class="video-item video-item-1 correcaoVideoExample">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" id="carouselExampleItem1">
+                            <div class="video-item video-item-1 correcaoVideoExample">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+
+                            <div class="video-item video-item-1 correcaoVideoExample correcaoVideoExampleCentral">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+
+                            <div class="video-item video-item-1 correcaoVideoExample">
+                                <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                                width="275" height="200" allow="autoplay"></iframe>
+                                <div class="under_texto">
+                                    <p>configuração: zoom</p>
+                                    <p>aplicando configuração ao prompt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <button class="carousel-control-prev arrowIconExample1" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next arrowIconExample2" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
             </div>
         </div>
 
@@ -122,36 +156,57 @@
                 <h1>/ galeria</h1>
             </div>
             <p>conjunto de animações que criamos <br>utilizando o <span>gera.ai</span></p>
-            <!-- slide 01 -->
-            <div class="slide">
-                <div class="conteudo_slide">
-                    <video src="video_4.mp4" controls></video>
-                    <div class="side_texto">
-                        <p><span>vambora</span><br>adriana calcanhoto</p>
+            <div id="carouselExampleIndicators1" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" id="carouselHome">
+                    <div class="carousel-item active" id="carouselGaleryItem1">
+                        <div class="videoCarousel">
+                            <iframe src="https://drive.google.com/file/d/1ttDjjRt5Ohvk5sZTvW2bXJqqBhnkn0JR/preview" 
+                            width="600" height="400" allow="autoplay"></iframe>
+                        </div>
+                        <div class="carouselGaleryItemInformation">
+                            <div class="information musica">como dois animais</div>
+                            <div class=" information artista">alceu valença</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="carouselGaleryItem2">
+                        <div class="videoCarousel">
+                            <iframe src="https://drive.google.com/file/d/1wLEz-Ta0AZe6qYAs2iYG46F1_lDmIlvp/preview"
+                            width="600" height="400" allow="autoplay"></iframe>
+                        </div>
+                        <div class="carouselGaleryItemInformation">
+                            <div class="information musica">dia branco</div>
+                            <div class=" information artista">geraldo azevedo</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="carouselGaleryItem3">
+                        <div class="videoCarousel">
+                            <iframe src="https://drive.google.com/file/d/13B_IOqNfFcgLsxpNaqzaevtJ5mgv5VM7/preview"
+                            width="600" height="400" allow="autoplay"></iframe>
+                        </div>
+                        <div class="carouselGaleryItemInformation">
+                            <div class="information musica">vambora</div>
+                            <div class=" information artista">adriana calcanhoto</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- slide 02 -->
-            <div class="slide">
-                <div class="conteudo_slide">
-                    <div class="side_texto">
-                        <p><span>vambora</span><br>adriana calcanhoto</p>
-                    </div>
-                    <video src="video_4.mp4" controls></video>
-                </div>
-            </div>
-            <!-- slide 03 -->
-            <div class="slide">
-                <div class="conteudo_slide">
-                    <video src="video_4.mp4" controls></video>
-                    <div class="side_texto">
-                        <p><span>vambora</span><br>adriana calcanhoto</p>
-                    </div>
-                </div>
+                <button class="carousel-control-prev arrowIconGalery1" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next arrowIconGalery2" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="modal fade" id="testeAgoraModal" tabindex="-1" aria-labelledby="testeAgoraModalLabel" aria-hidden="true">
     <div class="modal-dialog" id="modalDialogCustom">
