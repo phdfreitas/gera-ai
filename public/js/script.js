@@ -1,5 +1,35 @@
 /*Player de música*/
 let wavesurfer;
+
+let valorTotalEmSegundos = 0;
+let cronometro;
+
+function musicCurrentTime(valorAtual = wavesurfer.getCurrentTime()){
+    let tempoInicialMusicPlayer = document.querySelector("#tempoInicialMusicPlayer");
+    valorTotalEmSegundos = Math.floor(valorAtual) - 1;
+    valorTotalEmSegundos++;
+
+    if(valorTotalEmSegundos > 59){
+        let minutos = Math.floor(valorTotalEmSegundos / 60);
+        let segundos = Math.floor(valorTotalEmSegundos % 60);
+
+        if(segundos < 10){
+            tempoInicialMusicPlayer.innerHTML = `${minutos}:0${segundos}`;
+        }
+        else{
+            tempoInicialMusicPlayer.innerHTML = `${minutos}:${segundos}`;
+        }
+    }
+    else{
+        if(valorTotalEmSegundos < 10){
+            tempoInicialMusicPlayer.innerHTML = `0:0${valorTotalEmSegundos}`;
+        }
+        else{
+            tempoInicialMusicPlayer.innerHTML = `0:${valorTotalEmSegundos}`;
+        }
+    }
+}
+
 (function handleAudioPlayer(){
     let playPauseButton = document.querySelector("#playPauseButton");
     let stopButton = document.querySelector("#stopButton");
@@ -28,6 +58,10 @@ let wavesurfer;
             hideScrollbar: true,
         });
 
+        waveform.addEventListener("click", function(){
+            cronometro = setInterval(musicCurrentTime, 1000);
+        });
+
         playPauseButton.addEventListener("click", function(){
             tempoInicialMusicPlayer.classList.remove("displayNoneElement");
             
@@ -45,10 +79,14 @@ let wavesurfer;
             if(playSvg.classList.contains("displayNoneElement")){
                 playSvg.classList.remove("displayNoneElement");
                 pauseSvg.classList.add("displayNoneElement");
+
+                clearInterval(cronometro);
             }
             else{
                 playSvg.classList.add("displayNoneElement");
                 pauseSvg.classList.remove("displayNoneElement");
+                
+                cronometro = setInterval(musicCurrentTime, 1000);
             }
 
             wavesurfer.playPause();

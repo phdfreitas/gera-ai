@@ -958,6 +958,13 @@
     }
 }
 
+@media screen and (max-height: 700px) {
+    .corretivo{
+        height: 10px;
+        padding: 35px;
+    }
+}
+
 .separadorModalHome {
     text-align: center;
     position: relative;
