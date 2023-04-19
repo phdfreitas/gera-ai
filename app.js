@@ -117,6 +117,7 @@ app.post('/dashboard', (req, res) => {
     
     response.then(res => res.json())
     .then(data => {
+        console.log(data);
         res.render('dashboard', {data});
     }).catch(error => {
         res.send('Error: ' + error);
@@ -133,9 +134,10 @@ app.post('/output', (req, res) => {
         "Content-Type": "application/json"
         }
     })
-
+    
     newResponse.then(res => res.json())
     .then(data => {
+        console.log(data);
         res.render('dashboard', {data});
     });
 })

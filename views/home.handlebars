@@ -258,16 +258,23 @@
                     <div>
                         <label class="labelInputModal" for="idVideoReplicate">id do video</label>
                         <input class="inputModal" type="text" id="idVideoReplicate" name="idVideoReplicate" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">                            
-                    </div>
+                                    
+                        <input 
+                            class="inputModal" 
+                            type="text" 
+                            id="linkReplicateIdVideoReplicate" 
+                            name="linkReplicateIdVideoReplicate"
+                            style="display: none;"
+                            >                            
+                        </div>
                 </div>
                                         
                 <div class="modalHomeRopape">
                     <p>
                         OBS: o identificador do vídeo foi enviado para email inserido na criação do vídeo.
                     </p>
-                    <button type="submit">verificar video</button>
-
                     
+                    <button id="btnVerificarVideoModal" class="btnForm" type="submit" onclick="enviaTokenReplicate()">verificar video</button>
                 </div>
             </form>
         </div>
